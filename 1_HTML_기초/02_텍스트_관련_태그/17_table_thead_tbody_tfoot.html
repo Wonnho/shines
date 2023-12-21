@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--
+table의 구조를 계층적으로
+thead-tbody-tfoot으로 정의하여
+테이블의 구조의 이해도를 높이고
+각각 영역마다 서로 다를 스타일을 적용 시킬 수 있다.
+-->
+<head>
+    <meta charset="utf-8">
+    <title>표 만들기</title>
+    <style>
+        table, th, td {
+            border:1px solid #ccc;
+        }
+        th, td {
+            width:80px;  /* 셀의 너비 */
+            padding:10px; /* 셀 테두리와 내용 사이의 간격(패딩) */
+        }
+        thead, tfoot {
+            background : #eeeeee;  /* thead와 tfoot의 배경 색 */
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption> 제주특별자치도 학교현황(2015.4.1 기준)</caption>
+    <thead>
+    <tr>
+        <th>구분</th>
+        <th>학교수</th>
+        <th>학급수</th>
+        <th>학생수</th>
+        <th>교원수 </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <th>유치원</th>
+        <td>117</td>
+        <td>252</td>
+        <td>5,547</td>
+        <td>474</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>함계</th>
+        <td>300</td>
+        <td>3,437</td>
+        <td>86,954</td>
+        <td>6,111</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

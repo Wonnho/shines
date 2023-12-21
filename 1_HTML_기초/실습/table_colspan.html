@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border:1px solid #ccc;
+        }
+        th {
+            padding:15px;   /* 셀 테두리와 내용 사이의 간격(패딩) */
+        }
+        /*
+        nth-child: CSS 선택자로써 CSS에서 직접 사용할 수 있는 내장 함수.
+        문서의 특정 요소를 선택하여 스타일 적용하는 데 사용됨.
+        자세한 CSS 선택자의 예는 CSS 편에서 다룰 예정
+         */
+        tr > td:nth-child(odd) {
+            width:120px;  /* 홀수번째 열의 너비 : 120px */
+        }
+        tr > td:nth-child(even) {
+            width:300px;  /* 짝수번째 열의 너비 : 300px */
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>이름</th>
+        <th></th>
+        <th>연락처</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>주소</th>
+        <td colspan="3"></td>
+    </tr>
+</table>
+</body>
+</html>
