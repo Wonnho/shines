@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style:none;
+        }
+        li {
+            margin: 20px;
+        }
+        /*
+        li안에 label태그에 대한 스타일 적용
+        비교) 두개의 태그에 공통 적용하려면 아래와 같은 형식을 사용한다.
+           태그1, 태그2 { }
+        */
+        </style>
+
+</head>
+<body>
+<!--nodejs server를 이용할 수 있을까?-->
+<form action="search.php" method="post">
+    <input type="text" title="검색" name="search">
+    <input type="submit" value="검색">
+</form>
+<form>
+    <h3>수강분야</h3>
+    <ul>
+    <li><input type="checkbox" value="grammar">문법</li>
+    <li><input type="checkbox" value="writing">작문</li>
+    <li><input type="checkbox" value="comprehension">독해</li>
+    </ul>
+    <h3>수강 과목(1과목만 선택 가능)</h3>
+        <ul>
+            <li><input type="radio" name="subject" id="eng" value="eng">
+                <label for="eng">영어회화</label></li>
+            <li><input type="radio" name="subject" id="ch"value="ch">
+                <label for="ch">중국어 회화</label></li>
+            <li><input type="radio" name="subject" id="jp" value="jp">
+                <label for="jp">일본어 회화</label></li>
+        </ul>
+
+</form>
+
+</body>
+
+</html>
