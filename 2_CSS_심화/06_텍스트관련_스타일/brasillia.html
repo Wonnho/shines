@@ -29,6 +29,7 @@
 
         p {
             font-size: 1.5em;
+            letter-spacing: 0.02em;
         }
 
         img {
@@ -36,15 +37,56 @@
             margin-right: 24px;
         }
 
+
 li {
-    display: flex;
+    display: inline;
+    margin:10px 15px;
+    padding: 10px;
 }
-.navbar a {
+.navbar a:link {
     text-decoration: none;
+    color: blue;
+}
+/*.navbar a {*/
+/*    text-decoration: none;*/
+/*}*/
+.navbar a:active {
+    background-color: #555555;
+    color: chartreuse;
+    margin: 10px 15px;
+    padding: 20px;
+}
+
+.navbar a:hover {
+    color: #ff3333;
+}
+
+.navbar a:visited {
+    color: #555555;
 }
 
 .name{
     text-decoration: line-through;
+}
+.para1
+{
+    text-align: left;
+    margin-left: 20px;
+    text-indent: 25px;
+    line-height: 1.6em;
+}
+.para2 {
+    width: 850px;
+    /*height: 210px;*/
+    white-space:nowrap;
+    text-align: right;
+    margin-right: 20px;
+    line-height: 111.4%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.para2:hover {
+    overflow: visible;
 }
     </style>
 </head>
@@ -53,14 +95,16 @@ li {
 <navbar class="navbar">
     <ul>
         <li><a href="login.html" target="_blank">로그인</a></li>
-        <li></li>
-        <li></li>
+        <li><a href="company.html" target="_blank">회사소개</a> </li>
+        <li><a href="location.html" target="_blank">찾아오는길</a></li>
         <li></li>
     </ul>
 </navbar>
 <h1 >Brasília</h1>
-<p>Brasília was a planned city developed by Lúcio Costa, Oscar Niemeyer and Joaquim Cardozo in 1956 in a scheme to move the capital from Rio de Janeiro to a more central location. The landscape architect was Roberto Burle Marx.[8][9] The city's design divides it into numbered blocks as well as sectors for specified activities, such as the Hotel Sector, the Banking Sector, and the Embassy Sector. Brasília was inscribed as a UNESCO World Heritage Site in 1987 due to its modernist architecture and uniquely artistic urban planning.[10] It was named "City of Design" by UNESCO in October 2017 and has been part of the Creative Cities Network since then
-    It is notable for its white-colored, modern architecture, designed by Oscar Niemeyer. All three branches of Brazil's federal government are located in the city: executive, legislative and judiciary. Brasília also hosts 124 foreign embassies.[12] The city's international airport connects it to all other major Brazilian cities and some international destinations, and it is the third-busiest airport in Brazil. It was one of the main host cities of the 2014 FIFA World Cup and hosted some of the football matches during the 2016 Summer Olympics; it also hosted the 2013 FIFA Confederations Cup.
+<p class="para1">Brasília was a planned city developed by Lúcio Costa, Oscar Niemeyer and Joaquim Cardozo in 1956 in a scheme to move the capital from Rio de Janeiro to a more central location. The landscape architect was Roberto Burle Marx.[8][9] The city's design divides it into numbered blocks as well as sectors for specified activities, such as the Hotel Sector, the Banking Sector, and the Embassy Sector. Brasília was inscribed as a UNESCO World Heritage Site in 1987 due to its modernist architecture and uniquely artistic urban planning.[10]
+    It was named "City of Design" by UNESCO in October 2017 and has been part of the Creative Cities Network since then
+    It is notable for its white-colored, modern architecture, designed by Oscar Niemeyer.
+    All three branches of Brazil's federal government are located in the city: executive, legislative and judiciary. Brasília also hosts 124 foreign embassies.[12] The city's international airport connects it to all other major Brazilian cities and some international destinations, and it is the third-busiest airport in Brazil. It was one of the main host cities of the 2014 FIFA World Cup and hosted some of the football matches during the 2016 Summer Olympics; it also hosted the 2013 FIFA Confederations Cup.
 
     Laid out in the shape of an airplane, its "fuselage" is the Monumental Axis, a pair of wide avenue flanking a large park. In the "cockpit" is Praça dos Três Poderes, named for the 3 branches of government surrounding it. Brasília has a unique legal status, as it is an administrative region rather than a municipality like other cities in Brazil.
 
@@ -68,7 +112,7 @@ li {
 
 <img src="./images/brazillia.png">
 <h2>Costa Plan</h2>
-<p> <span class="name">Juscelino Kubitschek</span> was elected President of Brazil in 1955. Upon taking office in January 1956, in fulfilment of his campaign pledge, he initiated the planning and construction of the new capital. The following year an international jury selected Lúcio Costa's plan to guide the construction of Brazil's new capital, Brasilia. Costa was a student of the famous modernist architect Le Corbusier, and some of modernism's architecture features can be found in his plan. Costa's plan was not as detailed as some of the plans presented by other architects and city planners. It did not include land use schedules, models, population charts or mechanical drawings; however, it was chosen by five out of six jurors because it had the features required to align the growth of a capital city.[17] Even though the initial plan was transformed over time, it oriented much of the construction and most of its features survived.
+<p class="para2"> <span class="name" >Juscelino Kubitschek</span> was elected President of Brazil in 1955. Upon taking office in January 1956, in fulfilment of his campaign pledge, he initiated the planning and construction of the new capital. The following year an international jury selected Lúcio Costa's plan to guide the construction of Brazil's new capital, Brasilia. Costa was a student of the famous modernist architect Le Corbusier, and some of modernism's architecture features can be found in his plan. Costa's plan was not as detailed as some of the plans presented by other architects and city planners. It did not include land use schedules, models, population charts or mechanical drawings; however, it was chosen by five out of six jurors because it had the features required to align the growth of a capital city.[17] Even though the initial plan was transformed over time, it oriented much of the construction and most of its features survived.
 
     Brasilia's accession as the new capital and its designation for the development of an extensive interior region inspired the symbolism of the plan. Costa used a cross-axial design indicating the possession and conquest of this new place with a cross,[18] often likened to a dragonfly, an airplane or a bird.[17] Costa's plan included two principal components, the Monumental Axis (east to west) and the Residential Axis (north to south). The Monumental Axis was assigned political and administrative activities, and is considered the body of the city with the style and simplicity of its buildings, oversized scales, and broad vistas and heights, producing the idea of Monumentality. This axis includes the various ministries, national congress, presidential palace, supreme court building and the television and radio tower.[18] The Residential Axis was intended to contain areas with intimate character and is considered the most important achievement of the plan; it was designed for housing and associated functions such as local commerce, schooling, recreation and churches, constituted of 96 superblocks [pt] limited to six-story buildings and 12 additional superblocks limited to three-story buildings;[17] Costa's intention with superblocks was to have small self-contained and self-sufficient neighborhoods and uniform buildings with apartments of two or three different categories, where he envisioned the integration of upper and middle classes sharing the same residential area</p>
 </body>
