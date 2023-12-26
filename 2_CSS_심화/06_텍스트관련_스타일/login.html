@@ -8,8 +8,13 @@
             margin: 20px;
 
         }
-        li {
+        ul {
+            display: inline-block;
+        }
+
+       ul li {
             list-style: none;
+           display: inline;
         }
 
         .trans1 {
@@ -26,27 +31,34 @@
         .pwd {
             font:icon;
         }
+
+        .membership {
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
 <form>
     <fieldset>
     <legend>로그인</legend>
-    <ul>
+    <ul class="login">
         <li>
             <label for="id">아이디 </label>
-            <input type="text" id="id">
+            <input type="text" id="id"></li>
         <li class="pwd">
             <label for="pwd">비밀번호</label>
             <input type="password" id="pwd">
         </li>
     </ul>
     </fieldset>
+
     <li>
         <p>회원이 아니신가요?</p>
+
         <label for="membership">회원가입 </label>
         <input type="text" id="membership">
     </li>
+
 </form>
 
 
