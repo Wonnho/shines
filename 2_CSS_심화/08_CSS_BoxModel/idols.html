@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+
+           &{
+               background-image:url('images/bg1.png') ;
+           }
+        nav {
+            width: 100%;
+            height: 60%;
+            background-color: #069;
+        }
         nav ul {
             list-style-type: none ;
         }
-        nav ul li {
-            display: inline;
-            padding: 10px 15px;
-            margin-right: 20px;
-            /*!*list-style: none;*! 안먹네* a  tag에 적용해야 한다. */
-            border-top: 3px solid #222;
+        /*nav ul li {*/
+        /*    display: inline;*/
+        /*    padding: 10px 15px;*/
+        /*    margin-right: 20px;*/
+        /*    !*!*list-style: none;*! 안먹네* a  tag에 적용해야 한다. *!*/
+        /*    border-top: 3px solid #222;*/
+        /*}*/
+
+        nav ul li
+        {
+            display: inline-block;
+            margin: 20px;
         }
 
 
@@ -26,7 +41,21 @@
         }
         .block img {
             display: block;
-margin: 11px;
+            margin: 11px;
+            border-style: dashed;
+            border-color: #006699;
+            background-clip: content-box;
+            border-radius: 200px;
+        }
+
+        #BTS  {
+           border-radius : 70px/40px;
+        }
+
+        .lyrics {
+            margin-top: 10px;
+            background-color: #eeeeee;
+            background: radial-gradient(circle closest-corner at 10% 40%, white,#555555);
         }
     </style>
 </head>
@@ -41,16 +70,18 @@ margin: 11px;
 
         </ul>
     </nav>
+
 </header>
 <h1>I AM</h1>
 <div class="block">
 <img src="images/IVE.jpg" alt="">
-<img src="images/BTS.jpg" alt="">
+<img src="images/BTS.jpg" alt="" id="BTS" >
 <img src="images/leserafeme.jpg" alt="">
 <img src="images/straykids.jpg" alt="">
 </div>
-
-<pre>다른 문을 열어 따라갈 필요는 없어
+<div class="lyrics">
+<pre>
+    다른 문을 열어 따라갈 필요는 없어
     넌 너의 길로, 난 나의 길로, 음음
     하루하루마다 색이 달라진 느낌
     밝게 빛이 나는 길을 찾아
@@ -96,6 +127,8 @@ margin: 11px;
     Be a writer, 장르로는 판타지
     내일 내게 열리는 건 big, big stage
     So that is who I am</pre>
+</div>
 </body>
-<blockquote> <quote>출처: </quote>https://www.google.com/search?q=i+am+%EA%B0%80%EC%82%AC&oq=I+AM&gs_lcrp=EgZjaHJvbWUqBwgHEAAYgAQyCggAEAAYsQMYgAQyDwgBEEUYORjjAhixAxiABDIKCAIQLhixAxiABDIMCAMQABhDGIAEGIoFMg0IBBAuGIMBGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMg0ICRAuGK8BGMcBGIAE0gEJNzk5OWowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8</blockquote>
+
+<blockquote> <quote>가사출처: </quote>https://www.google.com/search?q=i+am+%EA%B0%80%EC%82%AC&oq=I+AM&gs_lcrp=EgZjaHJvbWUqBwgHEAAYgAQyCggAEAAYsQMYgAQyDwgBEEUYORjjAhixAxiABDIKCAIQLhixAxiABDIMCAMQABhDGIAEGIoFMg0IBBAuGIMBGLEDGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMg0ICRAuGK8BGMcBGIAE0gEJNzk5OWowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8</blockquote>
 </html>
