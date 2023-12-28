@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>표 스타일</title>
+    <style>
+			body{
+				font-family:"맑은 고딕", "고딕", "굴림";
+			}
+			table, td {
+				border:1px solid #ccc;
+			}
+			table {
+				width:300px;
+				table-layout:fixed; /* 셀의 내용과 상관없이 레이아웃 고정 */
+			}			
+			td {
+				width:150px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Table Layout</h1>
+		<table>
+			<tr>
+				<td>
+					한글로띄어쓰기없기길게붙여쓰기
+				</td>
+<!-- 영문의 경우 TD의 속성보다 더 긴 공백이 없는 글자가 올경우에는
+	width 속성이 무시되기 때문에 테이블 컨텐츠 작성할 때 주의하거나
+	자동줄바꿈 같은 스타일을 지정해야 한다. 다음예제 참고	-->
+				<td>
+					long_description_without_space				
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

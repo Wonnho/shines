@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>visibility 속성</title>
+		<style>
+			img {
+				margin:10px;
+				padding:5px;
+				border:1px solid black;
+			}
+			.invisible {
+/* 해당 요소를 보이지 않게 처리
+ 프로토타입 또는 특정한 상황에서만 HTML 요소를 보이고자 할 때 활용 */
+				visibility:hidden;
+			}
+		</style>
+	</head>
+	<body>
+			<img src="images/pic1.jpg">
+			<img src="images/pic2.jpg" class="invisible">
+			<img src="images/pic3.jpg">
+	</body>
+</html>
