@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>동영상 배경</title>	
+		<style>
+			#container {
+				position:relative;
+        text-align:center;				
+				margin-top:30%;
+        margin-left:30%;
+			}
+      h2 {
+        font-size:2em;
+      }
+			h1{
+				font-size:3.5em;
+			}
+      a:link, a:visited { 
+        text-decoration:none;
+        color:#222;
+      }
+      a:hover {
+        cursor:pointer;
+      }
+			#bg {
+				position:fixed;
+				left:0;
+				top:0;
+				width:auto;
+				height:auto;
+				min-width:100%;
+				min-height:100%;
+				z-index:-100;
+				background:url(../../../../../../../Users/EZEN/Downloads/11_HTML5와_Multimedia/images/flame.jpg) left top no-repeat;
+				background-size: cover;
+			}
+		</style>
+		<!--[if lt IE 9]>
+		  <script src="js/html5shiv.min.js"></script>
+		<![endif]-->		
+	</head>
+	<body>
+		<video src="../../../../../../../Users/EZEN/Downloads/11_HTML5와_Multimedia/media/flame.mp4" autoplay loop muted poster="../../../../../../../Users/EZEN/Downloads/11_HTML5와_Multimedia/images/flame.jpg" id="bg"></video>
+		<div id="container">
+      <h2>마지막까지 인내하고 최선을 다해봐요!</h2>
+      <h1><a href="https://www.youtube.com/results?search_query=%EA%B3%B5%EB%B6%80%ED%95%A0%EB%95%8C+%EB%93%A3%EB%8A%94+%EC%9D%8C%EC%95%85">공부할때 듣는 음악</a></h1>
+		</div>		
+	</body>
+</html>
