@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 51px;
+        }
+
+        .box {
+            width: 101px;
+            height: 101px;
+            background-color: #006699;
+            border: 1px solid black;
+            transition-property: background-color, transform, width, height;
+            transition-duration: 2s, 3s;
+            /*preperty요소별로 순서 대로 2초, 3초, 2초, 3초 적용*/
+        }
+
+        .box:hover {
+            width: 200px;
+            height: 200px;
+            background-color: #00ff21;
+            transform: rotate(181deg);
+        }
+
+        .boxes {
+            margin-top: 300px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid blue;
+        }
+
+        .box1 {
+            border-radius: 5px;
+        }
+
+        .box2 {
+            border: 2px dotted #00ff21;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>!</h1>
+    <img src="images/coffee.jpg">
+</div>
+
+<div class="boxes box1">
+no delay
+</div>
+<div class="boxes box2">
+delay
+</div>
+</body>
+</html>
