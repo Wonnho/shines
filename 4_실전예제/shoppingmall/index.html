@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
+<!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
     <style>
 
         h1 {
@@ -14,11 +19,13 @@
 
         }
 
+
+
         nav ul li{
             display: inline-block;
             font-size: 18px;
             padding-right: 21px;
-            /*justify-content: end;*/
+
         }
 
         nav a {
@@ -58,7 +65,13 @@
             float:left;
             text-decoration: none;
             margin-right: 55px;
-            margin-top: 15px;
+            /*margin-top: 15px;*/
+            margin-bottom: 7px;
+        }
+
+        .image li img:hover {
+            transform:translate(-5px,-3px);
+            transform:scale(1.2);
         }
 
         .delivery {
@@ -69,6 +82,29 @@
             width: 1900px;
             height: 1000px;
             margin-bottom: 50px;
+            position: relative;
+
+        }
+        .image h2 {
+            font-size: 47px;
+            background-color: #a6a6a6;
+            /*background-color: */
+            text-align: center;
+            color: #9416d3;
+            padding-bottom: 72px;
+            margin-bottom: 7px;
+        }
+
+        video {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            margin-top: -970px;
+            margin-left: 1420px;
+        }
+
+        .foot {
+            clear: both;
         }
     </style>
 </head>
@@ -77,22 +113,54 @@
     <h1>Secondary Goods</h1></header>
 <nav>
     <ul>
-        <li><a href="login.html" target="_blank">로그인</a></li>
-        <li><a href="membership.html" target="_blank">회원가입</a></li>
-        <li><a href="visit.html">방문</a></li>
-        <li><a href="reserve.html">예약하기</a></li>
+        <li><a href="login/login_original.html" target="_blank">로그인</a></li>
+        <li><a href="login/membership.html" target="_blank">회원가입</a></li>
+        <li><a href="login/visit.html">방문</a></li>
+        <li><a href="login/reserve.html">예약하기</a></li>
     </ul>
 </nav>
 <div class="delivery">
     <img src="images/delivery.jpg">
+
+</div>
+<div>
+    <video src="media/delivery4.mp4" autoplay controls poster="images/online_delivery2.png"> </video>
 </div>
 <div class="image">
+<!--    <ul>-->
+<!--        <li>워치<a href="watch.html"> <img src="images/watch.jpg"></a></li>-->
+<!--        <li> 휴대폰<a href="cell.html"><img src="images/cell.PNG"></a></li>-->
+<!--        <li> 도서 <a href="book.html"> <img src="images/book.jpg"></a></li>-->
+<!--    </ul>-->
+    <h2>추천 상품</h2>
     <ul>
-        <li>워치<a href="watch.html"> <img src="images/watch.jpg"></a></li>
-        <li> 휴대폰<a href="cell.html"><img src="images/cell.PNG"></a></li>
-        <li> 도서 <a href="book.html"> <img src="images/book.jpg"></a></li>
+        <li><a href="watch.html"> <img src="images/watch.jpg"></a></li>
+        <li><a href="cell.html"><img src="images/cell.PNG"></a></li>
+        <li><a href="book.html"> <img src="images/book.jpg"></a></li>
+        <li><a href="charger.html"><img src="images/charger.jpg"></a></li>
+        <li><a href="laptop.html"> <img src="images/laptop.jpg"></a></li>
     </ul>
 </div>
 
 </body>
+<footer class="foot">
+<pre>
+    (주)코드랩
+회사 주소
+서울 금천구 가산디지털2로 144 현대테라타워 가산DK 20층
+사업자등록번호
+495-86-03228
+학원의 명칭
+코드랩아카데미
+학원설립ㆍ운영 등록번호
+제11702호
+통신판매업신고번호
+2023-서울금천-2845호
+개인정보보호책임자
+경승현(ksho218@codelabit.co.kr)
+전화번호
+02-2038-0800
+Copyright by CodeLab. All rights reserved.
+</pre>
+</footer>
 </html>
