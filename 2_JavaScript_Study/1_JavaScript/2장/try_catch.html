@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var firstName='wonnho';
+
+    var userName=prompt("What is your family name?");
+
+    var president=confirm("Will Trump gain the control next?");
+    try {
+        document.write('my name is '+firstName+'<br>');
+        document.write('my family name is '+userName);
+
+
+    } catch (e) {
+        document.write(e.message);
+    }
+    if(president) {
+        alert("maybe");
+    } else {
+        alert("I am not sure...");
+    }
+
+
+    window.open("http://www.netmarble.net","booop","left=0,width=130,top=0,height=55,location=yes,status=no");
+</script>
+</body>
+</html>
