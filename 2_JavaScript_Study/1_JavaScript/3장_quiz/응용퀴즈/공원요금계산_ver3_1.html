@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    fare=function (age,fare) {
+        if(age<14) {
+             fare=parseInt(prompt("요금을 입력하세요"));
+            if(fare<2000) {
+                document.write((2000-fare)+"원 부족합니다."+"입력하신"+fare+"를 반환합니다." );
+            else if (fare>2000) {
+                    document.write("감사합니다. 티멧을 발행하고 거스름돈"+(fare-2000)+"를 반환합니다" );
+                } else {
+                    document.write("감사합니다. 티켓을 발행합니다.")
+                }
+
+
+    }
+
+    var age=parseInt(prompt("몇살이에요?"));
+    // var fare=parseInt(prompt("요금을 입력하세요"));
+
+    if(age<0 ) {
+        document.write("다시입력하세요");
+    }
+    else if(age>0 && age<=3) {
+        document.write("무료");
+    } else if(age<14) {
+
+              var fare=parseInt(prompt("요금을 입력하세요"));
+        if(fare<2000) {
+            document.write((2000-fare)+"원 부족합니다."+"입력하신"+fare+"를 반환합니다." );
+        }
+        else if (fare>2000) {
+            document.write("감사합니다. 티멧을 발행하고 거스름돈"+(fare-2000)+"를 반환합니다" );
+                    } else {
+            document.write("감사합니다. 티켓을 발행합니다.")
+        }
+    }
+    else if(age<18) {
+        var fare=parseInt(prompt("요금을 입력하세요"));
+        if(fare<3000) {
+            document.write((3000-fare)+"원 부족합니다."+"입력하신"+fare+"를 반환합니다." );
+        }
+        else if (fare>3000) {
+            document.write("감사합니다. 티멧을 발행하고 거스름돈"+(fare-2000)+"를 반환합니다" );
+        } else {
+            document.write("감사합니다. 티켓을 발행합니다.")
+        }
+
+    } else if(age<65) {
+        var fare=parseInt(prompt("요금을 입력하세요"));
+        if(fare<5000) {
+            document.write((5000-fare)+"원 부족합니다."+"입력하신"+fare+"를 환환합니다." );
+        }
+        else if (fare>5000) {
+            document.write("감사합니다. 티멧을 발행하고 거스름돈"+(fare-2000)+"를 반환합니다" );
+        } else {
+            document.write("감사합니다. 티켓을 발행합니다.")
+        }
+    } else {
+        document.write("무료");
+    }
+</script>
+</body>
+</html>
