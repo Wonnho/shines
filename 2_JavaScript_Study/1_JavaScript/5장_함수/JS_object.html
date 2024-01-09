@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class BigDataStudent {
+        constructor(name,korScore,engScore,mathScore) {
+            this.name=name;
+            this.korScore=korScore;
+        this.engScore=engScore;
+            this.mathScore=mathScore;
+
+        }
+
+        calculateAvg() {
+            return(this.korScore+this.engScore+this.mathScore)/3.0;
+
+    }
+
+    getName() {
+            return this.name;
+    }
+
+    }
+    const student=new BigDataStudent("이진성",34,45,90);
+    const avgScore=student.calculateAvg();
+
+    alert(student.getName()+"의 평균 점수는"+avgScore+"입니다");
+
+
+
+</script>
+</body>
+</html>

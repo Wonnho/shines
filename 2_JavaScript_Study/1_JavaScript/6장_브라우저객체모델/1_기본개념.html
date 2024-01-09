@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigDataStudent Example</title>
+</head>
+<body>
+<script>
+/*
+ * 객체란?
+  데이터와 그 데이터를 다루는 동작(메서드)을 포함하는 복합적인 자료형
+  자바스크립트에서 아래와 같이 사용자 정의 객체를 생성하지는 않지만 내장 객체는 프로그램 효율성을 위해 빈번하게
+  사용하기 때문에 코드의 문법을 외우려하지말고 개념을 이해하는 정도록 접근하자
+
+ * JavaScript 클래스 정의
+  - 클래스: 객체를 생성하기 위한 자료형
+  - 문법:   class [클래스명]
+ * 클래스의 구성요소
+  - 속성: 생성자에서 this.[속성명] 으로 정의
+  - 메소드: 클래스 안에 정의된 함수
+ * 속성과 메소드 접근
+  객체 생성후 아래 방식으로 접근
+  객체명.속성
+  객체명.메소드
+  예) student1.name => 속성접근, student1.calculateAvg() => 메소드 접근
+*/
+    class BigDataStudent {
+        // 생성자: 객체 데이터를 초기화하고 생성하기 위한 역할을 하는 메소드
+        // constructor(매개변수1, .. 매개변수n)
+        constructor(name, korScore, engScore, mathScore) {
+            // this: 클래스 자신의 속성과 매개변수를 구별하기 위해서
+            this.name = name;
+            this.korScore = korScore;
+            this.engScore = engScore;
+            this.mathScore = mathScore;
+        }
+
+        // 멤버 메소드
+        calculateAvg() {
+            return (this.korScore + this.engScore + this.mathScore) / 3.0;
+        }
+
+        getName() {
+            return this.name;
+        }
+    }
+
+    // 객체 생성 및 메소드 호출
+    const student = new BigDataStudent("홍길동", 90, 80, 85);
+    const avgScore = student.calculateAvg();
+
+    // HTML에 결과 출력
+    alert( student.getName() + "의 평균 점수는 " + avgScore + "입니다.");
+</script>
+</body>
+</html>
