@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<script>
+    // 10명의 학생 성적을 배열에 저장
+    let studentScores = [85, 90, 78, 92, 88, 95, 89, 82, 79, 91];
+
+    // 성적 총합 계산
+    let totalScore = 0;
+    for (let i = 0; i < studentScores.length; i++) {
+        totalScore += studentScores[i];
+    }
+
+    // 성적 평균 계산
+    let averageScore = totalScore / studentScores.length;
+
+    // 결과 출력
+    alert("성적 총합: " + totalScore + "\n성적 평균: " + averageScore);
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

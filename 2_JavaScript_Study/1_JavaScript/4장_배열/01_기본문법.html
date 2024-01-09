@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<script>
+    /*
+    * 배열이란?
+    배열은 여러 값을 하나의 변수에 저장하는 데이터 구조입니다.
+    배열은 여러 유형의 데이터를 담을 수 있으며, 각 요소는 인덱스를 사용하여 접근할 수 있습니다.
+    * 문법
+    - 유형1
+    var 또는 let = new Array(배열요소1, 배열요소2, ... , 배열요소n);
+    - 유형2
+    var 또는 let = [배열요소1, 배열요소2, ... , 배열요소n];
+     */
+    // 배열 선언
+    var fruits = ["사과", "바나나", "딸기", "포도"];
+
+    // 배열의 길이 확인
+    document.write("<p>배열의 길이: " + fruits.length + "</p>");
+
+    // 배열 요소에 접근
+    // 배열의 첫번째 요소는 0부터 시작을 한다.
+    document.write("<p>첫 번째 과일: " + fruits[0] + "</p>");
+    document.write("<p>두 번째 과일: " + fruits[1] + "</p>");
+
+    // 배열에 새로운 요소 추가
+    fruits.push("오렌지");
+
+    // 배열 순회
+    document.write("<p>모든 과일:</p>");
+    document.write("<ul>");
+    for (var i = 0; i < fruits.length; i++ {
+
+        document.write("<li>" + fruits[i] + "</li>");
+    }
+    document.write("</ul>");
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--1. 아래는 학생 5명의 성적을 입력받아 총점과 평균을 구하세요.-->
+<!-- - 입력은 prompt, 출력은 alert를 활용하세요.-->
+<!-- - 5명의 학생의 성적을 입력받으세요.-->
+<!-- - 배운 문법으로만 문제를 해결해서요. (ChatGPT 추천 함수나 문법 사용 X)-->
+
+<!--화면 출력 (예시)-->
+<!--학생1의 성적을 입력하세요: 80-->
+<!--학생2의 성적을 입력하세요: 90-->
+<!--..-->
+<!--학생5의 성적을 입력하세요: 70-->
+
+<!--총점: 380-->
+<!--평균: 76.00-->
+
+
+<script>
+const studentNumber=5;
+let Score=[];
+let total=0;
+  for(let k=0;k<studentNumber;k++) {
+      let studentScore;
+      studentScore = parseFloat(prompt("성적을 입력하세요"));
+      Score.push(studentScore);
+
+  }
+
+  alert("Score:"+Score);
+
+  for(let k=0;k<Score.length;k++) {
+      total+=Score[k];
+  }
+// total+=Score;
+   alert('총점:\n'+total);
+  alert('평균:'+total/studentNumber);
+
+</script>
+</body>
+</html>

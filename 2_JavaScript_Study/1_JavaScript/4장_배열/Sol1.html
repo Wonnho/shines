@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // 학생 수
+  const STUDENT_NUM = 5;
+
+  // 성적을 저장할 배열
+  let scores = [];
+
+  // 성적 입력 받기
+  for (let i = 0; i < STUDENT_NUM; i++) {
+    // prompt를 통해 사용자로부터 성적 입력 받기
+    let userInput = prompt('학생' + (i + 1) + '의 성적을 입력하세요:');
+
+    // 입력값을 숫자로 변환하여 배열에 추가
+    let score = parseFloat(userInput);
+    scores.push(score);
+  }
+
+  // 총점 계산
+  let total = 0;
+  for (let i = 0; i < scores.length; i++) {
+    total += scores[i];
+  }
+
+  // 평균 계산
+  let average = total / STUDENT_NUM;
+
+  // 결과 출력
+  alert('총점: ' + 'total' +'평균: ' + average);
+</script>
+
+</body>
+</html>
