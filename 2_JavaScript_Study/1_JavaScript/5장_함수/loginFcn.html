@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const  id="codelab";
+    const password="codelab4321";
+
+    function login(id,pw) {
+        if(id==id) {
+            if(pw==password) {
+                document.write(id+" 로그인 되었습니다.");
+            } else {
+                alert("패스워드를 잘못입력하였습니다.");
+            }
+        } else {
+            alert("존재하지 않는 아이디입니다.")
+            ;
+        }
+    }
+
+    let userId=prompt("아이디를 입력하세요","");
+    let userPw=prompt("패스워드를 입력하세요","");
+
+    login(userId,userPw); //call login function
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const ship={
+        max:4,
+        passengers:[],
+        onBoard:function (name) {
+            if(this.passengers.length===4) {
+                document.write(`This ship is full.${name} can not board this ship`);
+
+            } else {
+                this.passengers.push(name);
+                document.write(`${name} boarded`);
+            }
+
+
+        }
+
+    }
+
+    ship.onBoard('chloe',"<br>");
+    ship.onBoard('david',"<br>");
+    ship.onBoard('Chan',"<br>");
+    ship.onBoard('Horkins',"<br>");
+    ship.onBoard('Deniel',"<br>");
+    document.write(`ship.passengers`);
+</script>
+</body>
+</html>

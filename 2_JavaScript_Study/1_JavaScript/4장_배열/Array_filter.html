@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const month=[0,1,2,3,4,5,6,7,8,9,10,11];
+
+    const filter2=month.filter(k=>{
+        document.write(`current month is ${k} <br>`);
+        return k%2==0;
+    });
+
+    document.write(filter2);
+
+    var fruits=['blueberry','tofu','eggplant']
+    const addFruit=function (fruit) {
+        fruits.push(fruit);
+    }
+    addFruit('watermelon');
+    document.write(fruits);
+</script>
+</body>
+</html>

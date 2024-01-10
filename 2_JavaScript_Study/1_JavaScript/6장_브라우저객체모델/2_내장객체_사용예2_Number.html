@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<script>
+    // 주요 속성
+    let minInteger = Number.MIN_SAFE_INTEGER;
+    let maxInteger = Number.MAX_SAFE_INTEGER;
+
+    document.write("최소 안전 정수: " + minInteger + "<br>");
+    document.write("최대 안전 정수: " + maxInteger + "<br>");
+
+    // 주요 메서드
+    let decimalNumber = 123.4567;
+
+    // toFixed(): 소수를 지정한 자릿수로 반올림하여 문자열로 반환
+    let formattedNumber = decimalNumber.toFixed(2);
+
+    // toString(): 숫자를 문자열로 변환
+    let numberAsString = decimalNumber.toString();
+
+    document.write("소수점 2자리 반올림: " + formattedNumber + "<br>");
+    document.write("숫자를 문자열로 변환: " + numberAsString + "<br>");
+</script>
+</body>
+</html>

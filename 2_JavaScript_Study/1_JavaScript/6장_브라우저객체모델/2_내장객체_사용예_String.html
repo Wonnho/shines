@@ -32,6 +32,13 @@
     // 예제 6: 문자열 자르기
     let slicedString = "Hello, World!".slice(7, 12);
     document.write("<p>자른 문자열: " + slicedString + "</p>");
+
+    let subString = "Hello, World!".substring(7, 12);
+    document.write("<p>자른 문자열: " + subString + "</p>");
+    // slice와 substing은 기능이 똑같지만 slice는 마이너스 인덱스를 사용할 수 있다.
+
+    let minusString = "Hello, Beautiful My World!".slice(-6, -1);
+    document.write("<p>자른 문자열: " + minusString + "</p>");
 </script>
 </body>
 </html>

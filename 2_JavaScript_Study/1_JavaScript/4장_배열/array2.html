@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function callRole(students) {
+        if(!Array.isArray(students)) return;
+
+        students.forEach((student)=>{
+       //     console.log(`We are all Earth people,${student}`);
+            document.write(`We are all Earth people,${student}`+"<br>");
+        });
+    }
+
+    const students=['Jun','Alley','Murray','Tobby'];
+
+    callRole(students);
+</script>
+</body>
+</html>

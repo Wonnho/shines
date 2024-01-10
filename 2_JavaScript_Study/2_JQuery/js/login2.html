@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!--    <link href="../css/main.css" rel="stylesheet" type="text/css">-->
+   <script src="jquery.js"></script>
     <style>
         body {
             margin: 0;
@@ -55,33 +56,32 @@
             border-radius: 4px;
         }
 
-        input[type="submit"] {
+         a {
+            text-decoration: none;
             background-color: #4caf50;
             color: #fff;
             cursor: pointer;
-            width: 100%;
+            /*width: 200px;*/
             padding: 10px;
             border: none;
             border-radius: 4px;
-        }
+              display: flex;
+          /*align-items: center;*/
+         /*justify-content: space-between;   */
+         text-align: center;
+         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #631515;
         }
 
         p {
             margin-top: 10px;
             color: #777;
             text-align: center;
+
         }
 
-        #membership {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
     </style>
 </head>
 <body>
@@ -100,14 +100,24 @@
         </ul>
     </fieldset>
 
-    <input type="submit" value="로그인">
+<!--    <input type="submit" value="로그인">-->
+<button class="login-btn">로그인</button>
+    <p>회원이 아니신가요? </p> <a href="membership2.html"><span>회원가입</span></a>
 
-    <p>회원이 아니신가요? <br>
 
-<!--  <input type="submit" value="회원가입">-->
-        <a href="login.html">회원가입</a>
-    </p>
 </form>
 
 </body>
+<script>
+    $(function() {
+        // $(".login li:first").css({"color":"blue"});
+        // $(".login li:first-of-type").css({"color":"blue"});
+        // $(".login li:nth-child(1)").css({"color":"blue"});
+        // $(".login li[label]:first-of-type").css({"color":"blue"});
+    //     안 먹히네?
+        $(".login").find("li label[for=id]").css({"color":"blue"});
+        $(".login li label:contains(비밀번호)").css({"color":"blue"});
+    });
+
+</script>
 </html>

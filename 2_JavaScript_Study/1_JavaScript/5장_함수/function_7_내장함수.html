@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+    // parseInt() 및 parseFloat(): 문자열을 숫자로 변환
+    let numString = "123";
+    let integerValue = parseInt(numString);
+    let floatValue = parseFloat("3.14");
+
+    document.write("정수로 변환: " + integerValue + "<br>");
+    document.write("부동 소수점으로 변환: " + floatValue + "<br><br>");
+
+    // isNaN(): 주어진 값이 NaN인지 확인
+    let isStringNaN = isNaN("Hello");
+    let isNumberNaN = isNaN(123);
+
+    document.write("isNaN('Hello'): " + isStringNaN + "<br>");
+    document.write("isNaN(123): " + isNumberNaN + "<br><br>");
+
+    // String() 및 Number(): 값의 형태를 각각 문자열 또는 숫자로 변환
+    let stringNumber = String(123);
+    let numericString = Number("3.14");
+
+    document.write("숫자를 문자열로 변환: " + stringNumber + "<br>");
+    document.write("문자열을 숫자로 변환: " + numericString + "<br><br>");
+
+    // typeof: 변수 또는 값의 데이터 유형을 반환
+    let typeOfString = typeof "Hello";
+    let typeOfNumber = typeof 123;
+
+    document.write("데이터 유형 확인 - 문자열: " + typeOfString + "<br>");
+    document.write("데이터 유형 확인 - 숫자: " + typeOfNumber + "<br><br>");
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이전/다음 페이지 예제</title>
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function goForward() {
+            history.forward();
+        }
+    </script>
+</head>
+<body>
+<h1>Page3</h1>
+
+<button onclick="goBack()">이전 페이지로</button>
+<button onclick="goForward()">다음 페이지로</button>
+
+<h2> 직접 이동 </h2>
+<a href="03_history_page1.html">첫번째 페이지로 이동</a></p>
+<a href="03_history_page2.html">두번째 페이지로 이동</a></p>
+<a href="03_history_page3.html">세번째 페이지로 이동</a></p>
+</body>
+</html>

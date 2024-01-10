@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 탐색 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		// 하위 요소 중 인덱스 2인 요소
+		// 인덱스는 0부터 시작
+		$("#menu li").eq(2)
+		.css({"background-color":"#ff0"});
+		// lt: less than
+		$("#menu li:lt(2)")
+		.css({"background-color":"#0ff"});
+		// gt: greater than
+		$("#menu li:gt(2)")
+		.css({"background-color":"#f0f"});
+	});
+</script>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+		<li>내용5</li>
+	</ul>
+</body>
+</html>

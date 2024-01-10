@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!--    <link href="../css/main.css" rel="stylesheet" type="text/css">-->
+    <title>Login Page</title>
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
     <style>
         body {
-            margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            /*background: url('path/to/your/image.jpg') center/cover no-repeat fixed;*/
         }
 
         form {
-            background-color: #fff;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
         }
 
         legend {
-            text-align: center;
             font-size: 1.5em;
-            margin-bottom: 20px;
             text-transform: uppercase;
             color: #333;
+            margin-bottom: 20px;
         }
 
         ul.login {
@@ -56,31 +55,22 @@
         }
 
         input[type="submit"] {
-            background-color: #4caf50;
+            background-color: #ff7f50; /* Coral color */
             color: #fff;
             cursor: pointer;
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #ff6347; /* Tomato color */
         }
 
         p {
             margin-top: 10px;
             color: #777;
-            text-align: center;
         }
 
         #membership {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            width: calc(100% - 22px); /* Adjusting for input padding and border */
         }
     </style>
 </head>
@@ -100,14 +90,15 @@
         </ul>
     </fieldset>
 
-    <input type="submit" value="로그인">
-
-    <p>회원이 아니신가요? <br>
-
-<!--  <input type="submit" value="회원가입">-->
-        <a href="login.html">회원가입</a>
-    </p>
+    <ul>
+        <li>
+            <p>회원이 아니신가요?</p>
+        </li>
+        <li>
+            <label for="membership">회원가입 </label>
+            <input type="text" id="membership">
+        </li>
+    </ul>
 </form>
-
 </body>
 </html>

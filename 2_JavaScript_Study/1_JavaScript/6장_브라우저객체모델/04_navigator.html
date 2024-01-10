@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Navigator 객체 예제</title>
+    <script>
+        // 크롬 브라우저에서 테스트 할것
+        // 브라우저 호환을 위한 특별한 기능을 수행하고자 할 때 선택적으로 사용
+        // 브라우저의 사용 언어 확인
+        document.write("<p>사용 언어: " + navigator.language + "</p>");
+
+        // 브라우저가 쿠키를 지원하는지 확인
+        document.write("<p>쿠키 지원 여부: " + (navigator.cookieEnabled ? "지원함" : "지원하지 않음") + "</p>");
+
+        // 브라우저의 플랫폼 확인
+        // Win32: 32bit 64bit 모두 지원
+        document.write("<p>플랫폼: " + navigator.platform + "</p>");
+
+        // 브라우저의 사용자 에이전트 문자열 확인 (브라우저 정보 확인)
+        // 크롬 브라우저가 초창기부터 지원했던 브라우저의 역사상 다른 브라우저 정보도 포함되어 있음
+        document.write("<p>사용자 에이전트: " + navigator.userAgent + "</p>");
+
+        // 현재 브라우저의 제조사 확인
+        document.write("<p>브라우저 제조사: " + navigator.vendor + "</p>");
+    </script>
+    </script>
+</head>
+<body>
+
+</body>
+</html>

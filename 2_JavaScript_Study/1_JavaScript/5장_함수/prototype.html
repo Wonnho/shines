@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function Storage() {
+        this.dataStorage={};
+    }
+
+    Storage.prototype.put=function (key,data) {
+        this.dataStorage[key]=data;
+    }
+
+    Storage.prototype.getData=function (key) {
+        return this.dataStorage[key];
+    }
+    const productStorage=new Storage();
+    productStorage.put('id001',{name:'keyboard',price:22000});
+    console.log(productStorage.getData('id001'));
+
+    function RemovableStorage() {
+        Storage.call(this);
+    }
+    RemovableStorage.prototype=Object.create(Storage.prototype);
+    RemovableStorage.prototype.removeAll=function () {
+        this.dataSource={}
+    }
+
+    const removableStorage=new RemovableStorage();
+    removableStorage.put('id001',{name:'keyboard',price:22000});
+    removableStorage.removeAll();
+    const item=removableStorage.getData('id001');
+    console.log(item);
+</script>
+</body>
+</html>

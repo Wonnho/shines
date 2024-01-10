@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Screen 객체 예제</title>
+    <script>
+        // screen 객체: 디스플레이 별 화면 UI를 다르게 처리하고자 할 때 선택적으로 사용 가능
+        // 예) 특정 화면 크기 이상에서만 수행되는 기능이나 스타일
+        function displayScreenInfo() {
+            // 화면 정보 가져오기
+            var screenWidth = screen.width;
+            var screenHeight = screen.height;
+            var colorDepth = screen.colorDepth;
+
+            // 화면 정보 출력
+            var screenInfo = "화면 너비: " + screenWidth + " 픽셀<br>";
+            screenInfo += "화면 높이: " + screenHeight + " 픽셀<br>";
+            screenInfo += "색상 깊이: " + colorDepth + " 비트";
+
+            document.getElementById("screenInfo").innerHTML = screenInfo;
+        }
+    </script>
+</head>
+<body>
+<h1>Screen 객체 예제</h1>
+<button onclick="displayScreenInfo()">화면 정보 가져오기</button>
+<p id="screenInfo"></p>
+</body>
+</html>

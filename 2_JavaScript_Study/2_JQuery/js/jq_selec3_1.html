@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 객체 조작 및 생성 </title>  
+<script src="jquery.js"></script>
+<script>
+	$(function(){
+		//$(대상요소).html() : 대상 요소의 값(요소)
+		var result_1 = $("#sec_1").html( );
+		console.log(result_1);
+		//$(대상요소).html("신규값"): 기존의 값을 신규값(요소)으로 지정
+		$("#sec_1 p").html("<a href=\"#\">Text1</a>");
+
+		//$(대상요소).text(): 대상 요소의 텍스트
+		var result_2 = $("#sec_2").text( );
+		console.log(result_2);
+		//$(대상요소).text("신규텍스트"): 기존의 텍스트를 신규 텍스트로 지정
+		$("#sec_2 h2").text("text()");
+	});
+</script>
+</head>
+<body>
+	<h1><strong>객체 조작 및 생성</strong></h1>
+	<section id="sec_1">
+		<h2><em>html()</em></h2>
+		<p>내용1</p>
+	</section>
+	<section id="sec_2">
+		<h2><em>텍스트()</em></h2>
+		<p>내용2</p>
+	</section>
+</body>
+</html>

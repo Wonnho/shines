@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    const sum=(...args) =>{
+        let total=0;
+        for(let k=0;k<args.length;k++) {
+            total+=args[k];
+        }
+        return total;
+    }
+
+    console.log('합:',sum(1,2,3));
+    const printArguments=()=>{
+        console.log(arguments);
+    }
+
+
+    printArguments(1,2,3);
+</script>
+</body>
+</html>

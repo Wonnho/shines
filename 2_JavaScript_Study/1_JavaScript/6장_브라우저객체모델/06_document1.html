@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+	var color=["white", "yellow", "aqua", "purple"];
+			
+	var i=0;
+	function changeColor() {
+		i++;
+		if(i >= color.length) {
+			i = 0;
+		}
+
+        // getElementById: HTML의 id가 인자로 주어진것과 동일한 요소를 찾아 반환
+		var bodyTag = document.getElementById("theBody");
+		bodyTag.style.backgroundColor = color[i];
+	}
+</script>
+</head>
+<body id="theBody">
+  <button onclick="changeColor();">배경색 바꾸기</button>
+</body>
+</html>

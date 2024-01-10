@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    let colors=["magenta","skyblue","purple",'violet'];
+
+    let k=0;
+
+    function backgroundChange() {
+        k++;
+        if(k>=colors.length) {
+            k=0;
+        }
+
+        let bodyTag=document.getElementById("theBody");
+        bodyTag.style.backgroundColor=colors[k];
+    }
+</script>
+<body id="theBody">
+<button onclick="backgroundChange();">Change Background Color</button>
+</body>
+</html>

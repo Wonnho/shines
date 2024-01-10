@@ -56,16 +56,19 @@
 
         input[type="submit"] {
             background-color: #99cc33;
-            width: 100px;
+            width: 140px;
             margin-top: 11px;
             border-radius: 5px;
         }
     </style>
 
+    <script src="jquery.js"></script>
+
 </head>
 <body>
-<h1>회원 가입</h1>
-<form>
+<!--In terms of HTML document structure and hierarchy, the <h1> tag and <form> tag are siblings rather than directly nested within each other.-->
+    <h1>회원 가입</h1>
+<form id="membership">
     <label for="user_id">아이디   </label>
     <input type="text" id="user_id" size="20" minlength="8" maxlength="15" autofocus placeholder="8자에서 20이내의 아이디를 작성하세요">
 
@@ -78,8 +81,11 @@
     <label for="check_pwd">비밀번호 확인</label>
     <input type="password" id="check_pwd" placeholder="위와 동일한 비밀번호를 입력하세요">
 
-    <input type="submit" value="회원가입">
+    <input type="submit" value="회원가입하고 싶어요">
 </form>
 </body>
-<script></script>
+<script>
+    // $("#membership").parent().css("color","lightgreen");
+    $("#membership").prev().css("color","lightgreen");
+</script>
 </html>

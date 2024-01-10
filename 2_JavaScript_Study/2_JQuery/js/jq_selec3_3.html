@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 객체 조작 및 생성 </title>  
+<script src="jquery.js"></script>
+<script>
+	$(function( ){
+		// 클래스 추가
+		$("#p1").addClass("aqua");
+		// 클래스 제거
+		$("#p2").removeClass("red");
+		// toggleClass: class가 없으면 추가 있으면 제거
+		$("#p3").toggleClass("green");
+		$("#p4").toggleClass("green");
+		// hasClass("클래스명"): 해당 클래스가 있다면 true반환 없으면 false반환
+		$("#p6").text($("#p5").hasClass("yellow"));
+	});
+</script>
+<style>
+	.aqua{background-color:#0ff;}
+	.red{background-color:#f00;}
+	.green{background-color:#0f0;}
+	.yellow{background-color:#ff0;}
+</style>
+</head>
+<body>
+	<p id="p1">내용1</p>
+	<p id="p2" class="red">내용2</p>
+	<p id="p3">내용3</p>
+	<p id="p4" class="green">내용4</p>
+	<p id="p5" class="yellow">내용5</p>
+	<p id="p6"></p>
+</body>
+</html>
