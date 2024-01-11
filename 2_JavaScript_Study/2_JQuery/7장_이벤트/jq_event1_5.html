@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="../js/jquery.js"></script>
+<script>
+$(function( ) {
+/*
+
+* 기본 이벤트 방지
+ 특정 이벤트(예: click) 핸들러인 경우 동시에 수행되는
+ html 태그 (예: <a> 새로운 페이지로 리다이랙션)에 의해 이벤트 핸들러가 수행될 수 없다.
+ 이벤트 핸들러 수행을 위해 HTML 태그의 기본 이벤트를 차단하기 위한 경우도 있다.
+ - 페이지 이동없이 동적으로 결과 갱신 (SPA)
+ - 비동기적 데이터 전송(예: Ajax, Web Socket)
+
+* 기본 이벤트 방지를 위한 문법
+  익명함수에 이벤트 객체 인자를 지정하면 내부적으로 이벤트 객체를 넘겨준다.
+  이벤트 객체의 preventDefault() 메소드를 사용한다.
+*/
+	$(".btn1").on("click", function(e){
+		e.preventDefault( );
+		$(".txt1")
+		.css({"background-color":"#ff0"});
+	});
+	$(".btn2").on("click", function(e){
+		$(".txt2")
+		.css({"background-color":"#0ff"});
+	});
+	// 더블클릭 이벤트
+	$(".btn3").on("dblclick", function(){
+		$(".txt3")
+		.css({"background-color":"#0f0"});
+	});   
+});
+</script>
+</head>
+<body>
+	<p><a href="http://www.easyspub.co.kr/" class="btn1">버튼1</a></p>
+	<p class="txt1">내용1</p>
+	<p><a href="http://www.easyspub.co.kr/" class="btn2">버튼2</a></p>
+	<p class="txt2">내용2</p>
+	<p><button class="btn3">버튼3</button></p>
+	<p class="txt3">내용3</p>
+</body>
+</html>

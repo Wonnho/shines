@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+<p></p><button id="btn1">버튼 1</button>
+
+
+<p><button id="btn2">버튼 2</button></p>
+<p class="txt"></p>
+
+</body>
+<script>
+    $(function (){
+        $("#btn1").data({"text":"Hi, button one,Hi there "})
+            .on({
+                "mouseover":overFnc,
+                "mouseout":outFnc,
+            });
+        $("#btn2").data({"text":"Hi, button two I've gotta go"})
+            .on({
+                "mouseover":overFnc,
+                "mouseout":outFnc,
+            });
+
+    });
+
+    function overFnc() {
+        $(".txt").text($(this).data("text"));
+    }
+
+    function  outFnc() {
+        $(".txt").text("");
+    }
+
+</script>
+</html>

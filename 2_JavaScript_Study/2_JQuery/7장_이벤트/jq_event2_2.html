@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	$("#btn1")
+	// 현재 이벤트가 발생한 요소에 자체적으로 속성과 값을 정의정
+    // 아래 예는 text 데이터 속성을 추가하고 그 값으로 'javascript' 값을 설정
+	.data({"text":"javascript"})
+	.on({
+		// 수행되는 이벤트 핸들러를 익명함수를 사용하지 않고 일반함수로 호출
+		// 아래 function overFunc, function outFunc가 있음을 확인한다.
+		"mouseover": overFnc,
+		"mouseout": outFnc
+	});
+
+	$("#btn2")
+	.data({"text":"welcome!"})
+	.on({
+		"mouseover focus": overFnc,
+		"mouseout blur": outFnc
+	});
+
+	function overFnc() {
+		// $(this): 현재 이벤트를 발생한 요소
+		/* 아래 코드 해석
+		.txt 클래스가 있는 모든 요소에 대해
+		현재 이벤트가 발생한 요소의 데이터 속성 'text'의 값을 가져와서
+		해당 값을 텍스트로 설정
+		( ().data() );
+		*/
+		$(".txt").text($(this).data("text"));
+	}
+	function outFnc() {
+		$(".txt").text("");
+	}
+});
+</script>
+</head>
+<body>
+	<p><button id="btn1">버튼1</button></p>
+	<p><button id="btn2">버튼2</button></p>
+	<p class="txt"></p>
+</body>
+</html>

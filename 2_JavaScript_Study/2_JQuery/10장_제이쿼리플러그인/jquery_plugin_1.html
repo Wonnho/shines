@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Plugin </title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<style>
+	.layer_popup{
+		/* 레이어 위치 지정*/
+		position: absolute;left: 50px; top: 50px;
+		/* 드래그 할 수 있는 요소에 대한 상태값 지정*/
+		cursor:move;
+	}
+</style>
+<script>
+$(function() {
+	$(".layer_popup").draggable();
+});
+</script>
+</head>
+<body>
+<div class="layer_popup">
+	<img src="images/pic_1.jpg" alt="">
+</div>
+</body>
+</html>
+<!--
+위 코드를 순수 자바스크립트로 구현 할 경우 아래와 같다.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>드래그 가능한 요소</title>
+<style>
+  .draggable {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    cursor: move;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var isDragging = false;
+    var offsetX, offsetY;
+
+    var draggableElement = document.querySelector(".draggable");
+
+    draggableElement.addEventListener("mousedown", function(e) {
+      isDragging = true;
+      offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
+      offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
+    });
+
+    document.addEventListener("mousemove", function(e) {
+      if (isDragging) {
+        var x = e.clientX - offsetX;
+        var y = e.clientY - offsetY;
+        draggableElement.style.left = x + "px";
+        draggableElement.style.top = y + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", function() {
+      isDragging = false;
+    });
+  });
+</script>
+</head>
+<body>
+  <div class="draggable">
+    <img src="images/pic_1.jpg" alt="드래그 가능한 이미지">
+  </div>
+</body>
+</html>
+
+-->

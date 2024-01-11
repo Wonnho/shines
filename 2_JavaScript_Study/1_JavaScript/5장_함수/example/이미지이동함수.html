@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn {
+
+        }
+    </style>
+
+</head>
+<body>
+<h1>Baskin Robins, 31!</h1>
+
+<div id="gallery">
+    <p>
+        <img src="images/slide03.jpg" id="photo" alt="">
+    </p>
+
+    <p>
+        <button onclick="gallery(0)" class="btn">이전</button>
+        <button onclick="gallery(1)" class="btn">다음</button>
+    </p>
+</div>
+</body>
+<script>
+    var num=1;
+    function gallery(direct) {
+    if(direct) {
+        if(num==5) return;
+        num++;
+    } else {
+            if(num==1) return;
+            num--;
+        }
+
+    var imgTag=document.getElementById("photo");
+    imgTag.setAttribute("src","images/slide0"+num+".jpg");
+    }
+</script>
+</html>

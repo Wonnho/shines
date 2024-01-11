@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$(".menuWrap_1 a").on("click", function(e) {
+		e.preventDefault();
+
+		$(".menuWrap_1 a")
+		// 전체 .munuWrap_1 하위 모든 a 태그 요소의 배경색을 회색으로 바꾼다.
+		.css({"background-color":"#8a8888"});
+
+		// $(this) 이벤트가 발생한 요소
+		$(this)
+		.css({"background-color":"#ff0"});
+	});
+
+	$(".menuWrap_2 a").on("click", function(e) {
+		e.preventDefault();
+
+		$(".menuWrap_2 a")
+		.css({"background-color":"#8a8888"});
+
+		var idx = $(".menuWrap_2 a").index(this);
+		$(".menuWrap_2 a").eq(idx)
+		.css({"background-color":"#0ff"});
+		
+		$(".idxNum").text(idx);
+	});
+});
+</script>
+</head>
+<body>
+<h2>$(this)</h2>
+<ul class="menuWrap_1">
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+				<li><a href="#">메뉴3</a></li>
+</ul>
+<h2>Index( )</h2>   
+<ul class="menuWrap_2">
+				<li><a href="#">메뉴4</a></li>
+				<li><a href="#">메뉴5</a></li>
+				<li><a href="#">메뉴6</a></li>
+</ul>
+<p class="idxNum"></p>
+</body>
+</html>

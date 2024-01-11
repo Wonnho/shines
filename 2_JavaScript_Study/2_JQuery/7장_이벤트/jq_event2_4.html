@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$(document).on("keydown", keyEventFnc);
+	function keyEventFnc(e) {
+	var direct = "";
+
+	switch(e.keyCode){
+		case 37: direct = "LEFT";
+		break;
+		case 38: direct = "TOP";
+		break;
+		case 39: direct = "RIGHT";
+		break;
+		case 40: direct = "BOTTOM";
+		break;
+		case 8: direct = "BACK SPACE";
+		break;
+		case 20: direct = "Caps Lock";
+		break;
+		// case 97: direct="소문자 a";
+		// break;
+	}
+	
+	if(direct) $("#user_id").val(direct);
+	}
+});
+/*
+ 매칭이 되는 숫자는 기본적으로 ASCII 코드 값이며
+ 그 밖에 키보드 입력은 표준화된 값이 없고 브라우저마다 틀릴 수 있으나 일반적으로 아래값을 사용한다.
+ 백스페이스: 8
+엔터: 13
+탭: 9
+Caps Lock: 20
+Shift: 16
+Ctrl: 17
+Space: 32
+Alt: 18
+F1: 112
+F2: 113
+ */
+</script>
+</head>
+<body>
+	<p><input type="text" name="user_id" id="user_id"></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function( ) {
+	//  해당요소(실제 html 구성요소: 내용1, 내용2, 내용3)에서 마우스가 벗아난 경우
+	$("#box_1").on("mouseout", function(){
+		$("#box_1")
+		.css({"background-color":"yellow"});
+	});
+
+	// 대상요소: 선택영역(div)에서 마우스가 벗어난 경우
+	$("#box_2").on("mouseleave", function(){
+		$("#box_2")
+		.css({"background-color":"pink"});
+	});
+});
+</script>
+</head>
+<body>
+<h1>mouseout</h1>
+<div id="box_1">
+				<p><a href="#">내용1</a></p>
+				<p><a href="#">내용2</a></p>
+				<p><a href="#">내용3</a></p>
+</div>
+
+<h1>mouseleave</h1>
+<div id="box_2">
+				<p><a href="#">내용4</a></p>
+				<p><a href="#">내용5</a></p>
+				<p><a href="#">내용6</a></p>
+</div>
+</body>
+</html>

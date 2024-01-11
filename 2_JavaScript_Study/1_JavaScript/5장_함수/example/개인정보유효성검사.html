@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        table thead tr {
+            text-align: center;
+            background-color: cadetblue;
+        }
+
+          fieldset {
+            text-align: center;
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+<form id="join">
+
+    <a href='mailto:wonnho71@naver.com?subject="hi" '></a>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <td colspan="2">회원 기본 정보</td>
+        </tr>
+
+        </thead>
+
+
+        <tr>
+
+
+            <td>login</td>
+
+            <td><input id='userid' type='text' maxlength="12" minlength="4">4~12
+
+                영문대소문자 및 숫자로만 입력</td>
+
+
+        </tr>
+
+
+
+        <tr>
+
+           <td>password</td>
+
+            <td><input id='pwd' type='password' maxlength="12"
+
+                       minlength="4">4~12 영문대소문자 및 숫자로만 입력</td>
+
+
+
+        </tr>
+
+       <tr>
+
+            <td>repassword</td>
+
+            <td><input id='repd' type='password' maxlength="12"
+
+                       minlength="4">4~12 영문대소문자 및 숫자로만 입력</td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>메일주소</td>
+
+            <td><input id='email' type='email'>예) id@domain.com</td>
+
+        </tr>
+
+
+        <tr>
+            <td>이름</td>
+
+            <td><input id='name' type='text' maxlength="32" minlength="1">1자
+
+                이상 32이자 이내로 입력하세요</td>
+        </tr>
+
+
+        <thead>
+        <tr style="bgcolor: lightblue">
+
+            <td colspan="2" text-align="center">개인 신상 정보</td>
+
+        </tr>
+
+        </thead>
+        <tr>
+
+            <!--
+
+            <td>우편번호</td> <td><input type="text" maxlength="6" minlength="5"><input id='addr' type='button' value="우편번호찾기" >-->
+
+            <td><input type="text" id="postCode" name="postCode"
+
+                       id="postCode" placeholder="우편번호" />   <input
+
+                    type="button" value="우편번호 찾기 " onClick="execDaumPostCode()"><br />
+
+                <input type="text" id="roadAddress" name="roadAddress"
+
+                       id="roadAddress" placeholder="도로명주소" /> <input type="text"
+
+                                                                      id="detailAddress" name="detailAddress" id="detailAddress"
+
+                                                                      placeholder="상세주소" /></td>
+        </tr>
+
+        <tr>
+
+            <td>주민등록번호</td>
+
+            <td><input id='passport' type='text' maxlength="13"
+
+                       minlength="13">예)1234561234567</td>
+
+
+
+            <!-- 주민등록 유효성 검사
+
+            n1 +n2 +n3 +n4 +n5 +n6 +n7 +n8 +n9 +n10 +n11+n12 =N 각 자릿수에 지정된 수의 곱을 더한 값을 N이라고 하면, N을 11로 나눈 나머지를 11에서 뺀 수가 주민등록번호 마지막 자릿수와 일치하면 정상적인 주민등록번호입니다.
+
+            -->
+
+        </tr>
+
+
+        <tr>
+
+
+
+            <td>생일</td>
+
+            <td><input id='year' type='text' maxlength="4" minlength="4">년
+
+                <input id='month' type='text' maxlength="2" minlength="2">월
+
+                <input id='day' type='text' maxlength="2" minlength="2">일</td>
+
+
+
+        </tr>
+        <tr>
+
+            <td>관심분야</td>
+
+            <td><input type='checkbox' name="hobby" value="computer">컴퓨터
+
+                <input type='checkbox' name="hobby" value="internet">인터넷 <input
+
+                        type='checkbox' name="hobby" value="travel">여행 <input
+
+                        type='checkbox' name="hobby" value="movie">Movie <input
+
+                        type='checkbox' name="hobby" value="music">Music</td>
+
+        </tr>
+        <tr>
+
+            <td>자기소개</td>
+
+            <td><textarea id="story" name="story" rows="5" cols="53">
+
+</textarea></td>
+
+
+        </tr>
+
+    </table>
+
+    <input type="button" onclick="joininsert()" value="회원 가입">
+
+    <input type='reset' value='다시입력'>
+
+</form>
+</body>
+</html>
