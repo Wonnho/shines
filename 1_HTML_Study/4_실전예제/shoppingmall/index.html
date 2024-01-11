@@ -56,6 +56,18 @@
  color: #ff0000;
         }
 
+        .btn {
+            position: relative;
+            /*right:0;*/
+            /*left: 0;*/
+            /*margin: auto;*/
+        /*    중앙정렬이 안되네 ...absolute에서만 되는 건가? */
+
+            left: 740px;
+            top: -150px;
+            margin: 15px;
+        }
+
         .image {
             margin: 0 auto;
         }
@@ -112,7 +124,12 @@
 
         .foot {
             clear: both;
+            display: none;
+            position: relative;
+            bottom: 20px;
         }
+
+
     </style>
 </head>
 <body>
@@ -128,7 +145,11 @@
     </ul>
 </nav>
 <div class="delivery">
-    <img src="images/delivery.jpg">
+    <p>
+    <img src="images/delivery01.jpg" id="photo" alt="images/delivery01.jpg">
+    </p>
+        <button type="button" onclick="delivery(0)" class="btn btn-light">이전</button>
+        <button type="button" onclick="delivery(1)" class="btn btn-light">다음</button>
 
 </div>
 <div>
@@ -152,23 +173,48 @@
 
 </body>
 <footer class="foot">
-<pre>
-    (주)코드랩
-회사 주소
-서울 금천구 가산디지털2로 144 현대테라타워 가산DK 20층
-사업자등록번호
-495-86-03228
-학원의 명칭
-코드랩아카데미
-학원설립ㆍ운영 등록번호
-제11702호
-통신판매업신고번호
-2023-서울금천-2845호
-개인정보보호책임자
-경승현(ksho218@codelabit.co.kr)
-전화번호
-02-2038-0800
+<map name="foot">
+    <area  shape="rect" coords="0,39,150,61" nohref>
+</map>
+    <h4>   (주)코드랩 </h4>
+    <pre>
+회사 주소:서울 금천구 가산디지털2로 144 현대테라타워 가산DK 20층
+사업자등록번호:495-86-03228
+학원의 명칭:코드랩아카데미
+학원설립ㆍ운영 등록번호: 제11702호
+통신판매업신고번호: 2023-서울금천-2845호
+개인정보보호책임자 :경승현(ksho218@codelabit.co.kr)
+전화번호: 02-2038-0800
 Copyright by CodeLab. All rights reserved.
 </pre>
 </footer>
+<script>
+    var num=1;
+    function delivery(move) {
+        if(move) {
+            if(num==3) return;
+            num++;
+        } else {
+            if(num==1) return;
+            num--;
+        }
+
+        var imgTag=document.getElementById("photo");
+        imgTag.setAttribute("src","images/delivery0"+num+".jpg");
+    }
+
+    // $(function () {
+    //     $(".foot").mouseover(function (){
+    //         $("this").slideToggle("slow");
+    //     });
+
+        $(function () {
+            $(".foot").hover(function (){
+                $(this).css("display","block");
+            }, function (){
+                $(this).css("display","none");
+            });
+    });
+
+</script>
 </html>

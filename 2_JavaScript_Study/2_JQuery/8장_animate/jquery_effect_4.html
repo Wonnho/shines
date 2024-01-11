@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 효과와 애니메이션 </title>  
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$(".txt1")
+	.animate({marginLeft:"200px"},1000)
+	.animate({marginTop:"200px"},1000)
+	// 패턴, 사용법으로 아래 코드를 정리합시다.
+    //애니매이션 중에 스타일 변경하고 싶은경우
+	// 아래와 같이 .queue 함수를 사용하자
+	.queue(function() {
+			// 변경할 내용을 정의하고
+			$(this).css({background:"red"});
+			// 애니메이션이 연속적으로 이어가기 위해서 아래와 같이
+		    // .dequeue()를 사용한다.
+			$(this).dequeue();
+	})
+	.animate({marginLeft:0},1000)
+	.animate({marginTop:0},1000);
+});
+</script>
+<style>
+	*{margin:0;}
+	.txt1{width:50px;text-align: 
+	center;background-color: aqua;}
+</style>
+</head>
+<body>
+	<p class="txt1">내용1</p>
+</body>
+</html>
