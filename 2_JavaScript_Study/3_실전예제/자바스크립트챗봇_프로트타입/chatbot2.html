@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatBot2</title>
+  <script src="js/jquery.js"></script>
+  <style>
+    #chat-container {
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+      border: 1px solid darkolivegreen;
+      /*overflow-y: scroll;*/
+    }
+  </style>
+</head>
+<body>
+
+<div id="chat-container"></div>
+
+</body>
+<script>
+$(function () {
+  const chatContainer=$('#chat-container');
+
+  function appendMessage(sender,message) {
+  const messageElement=$('<div></div>').html(`<strong>${sender}:</strong>${message}`);
+  chatContainer.append(messageElement);
+
+  }
+})
+</script>
+</html>
