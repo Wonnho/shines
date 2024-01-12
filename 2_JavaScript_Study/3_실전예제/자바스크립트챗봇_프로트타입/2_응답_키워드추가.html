@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 챗봇</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        #chat-container {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+        #input-container {
+            width: 300px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<div id="chat-container"></div>
+
+<script>
+    // jQuery가 문서를 모두 읽었을 때 실행
+    $(document).ready(function() {
+        // 채팅 내용을 담을 컨테이너 선택
+        const chatContainer = $('#chat-container');
+
+        // 사용자와 챗봇이 메시지를 출력하는 함수
+        function appendMessage(sender, message) {
+            // 메시지 요소 생성
+            const messageElement = $('<div></div>').html(`<strong>${sender}:</strong> ${message}`);
+            // 채팅 컨테이너에 메시지 추가
+            chatContainer.append(messageElement);
+            // 채팅 컨테이너를 가장 아래로 스크롤
+            chatContainer.scrollTop(chatContainer.prop('scrollHeight'));
+        }
+
+        // 사용자의 메시지를 받아서 챗봇이 응답하는 함수
+        function sendMessage(userMessage) {
+            // 사용자가 입력한 메시지를 채팅창에 추가
+            appendMessage('User', userMessage);
+
+            // 쇼핑 관련 키워드에 따른 응답 추가
+            if (userMessage.toLowerCase().includes('신발')) {
+                // 신발 관련 응답
+                setTimeout(function() {
+                    appendMessage('Chatbot', '신발 매장에 오신 것을 환영합니다! 어떤 종류의 신발을 찾고 계신가요?');
+                }, 500);
+            } else if (userMessage.toLowerCase().includes('의류')) {
+                // 의류 관련 응답
+                setTimeout(function() {
+                    appendMessage('Chatbot', '의류 매장에 오신 것을 환영합니다! 원하시는 스타일이나 종류가 있나요?');
+                }, 500);
+            } else if (userMessage.toLowerCase().includes('가전제품')) {
+                // 가전제품 관련 응답
+                setTimeout(function() {
+                    appendMessage('Chatbot', '가전제품 매장에 오신 것을 환영합니다! 어떤 제품을 찾고 계신가요?');
+                }, 500);
+            } else if (userMessage.toLowerCase().includes('액세서리')) {
+                // 액세서리 관련 응답
+                setTimeout(function() {
+                    appendMessage('Chatbot', '액세서리 매장에 오신 것을 환영합니다! 어떤 종류의 액세서리를 찾고 계신가요?');
+                }, 500);
+            } else if (userMessage.toLowerCase().includes('식품')) {
+                // 식품 관련 응답
+                setTimeout(function() {
+                    appendMessage('Chatbot', '식품 매장에 오신 것을 환영합니다! 어떤 종류의 식품을 찾고 계신가요?');
+                }, 500);
+            } else {
+                // 다른 키워드에 대한 기본 응답
+                setTimeout(function() {
+                    appendMessage('Chatbot', '안녕하세요! 다른 도움이 필요하신가요?');
+                }, 500);
+            }
+        }
+
+        // 입력창과 전송 버튼 생성
+        const inputContainer = $('<div id="input-container"></div>').appendTo('body');
+        const userInput = $('<input type="text" id="user-input" placeholder="메시지를 입력하세요">').appendTo(inputContainer);
+        const sendBtn = $('<button id="send-btn">전송</button>').appendTo(inputContainer);
+
+        // 전송 버튼 클릭 이벤트
+        sendBtn.click(function() {
+            // 사용자가 입력한 메시지를 가져와서 sendMessage 함수 호출
+            const userMessage = userInput.val();
+            sendMessage(userMessage);
+            // 입력창 비우기
+            userInput.val('');
+        });
+    });
+</script>
+</body>
+</html>

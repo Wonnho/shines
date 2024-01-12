@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주식 정보</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px;
+      table-layout: fixed; /* 열의 크기를 고정합니다. */
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<table id="stockTable">
+  <tr>
+    <th>기업명</th>
+    <th>주가</th>
+    <th>변동</th>
+    <th>변동률</th>
+  </tr>
+  <tr>
+    <td>삼성전자</td>
+    <td id="stockPrice">73,200</td>
+    <td id="priceChange">0</td>
+    <td id="percentageChange">0.00%</td>
+  </tr>
+</table>
+
+<script>
+  function updateStock() {
+    // 현재 주가
+    // 돈을 나타내는 숫자에 ,가 있기 때문에 숫자변환이 정상적으로 되지 않음
+    // 따라서 ,를 제거하고 숫자변환
+    const currentPrice = parseFloat($('#stockPrice').text().replace(',', ''));
+
+    // 랜덤한 변동률 생성 (-5%에서 5% 범위 내)
+    // Math.random(): 0~1 사이의 랜덤값
+    // Math.random() - 0.5:  -0.5 ~ 0.5 사이의 랜덤값
+    // (Math.random() - 0.5) * 10: -5 ~ 5 사이의 랜덤값 (우리가 원하는 범위임)
+    const randomChangePercentage = (Math.random() - 0.5) * 10;
+
+    // 주가 변동 (소수점 이하 없는 정수로 변경)
+    // 주어전 변동률을 활용하여 변동값을 얻는다.
+    const priceChange = Math.round(currentPrice * (randomChangePercentage / 100));
+    // 현재가격에 변동값을 더하여 변동값을 반영한 새로운 현재가격을 구한다.
+    const newPrice = currentPrice + priceChange;
+
+    // 변동 및 변동률 업데이트
+    $('#priceChange').text(priceChange);
+    $('#stockPrice').text(newPrice.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+    $('#percentageChange').text(randomChangePercentage.toFixed(2) + '%');
+  }
+
+  // 1초마다 주가 업데이트
+  setInterval(updateStock, 1000);
+</script>
+
+</body>
+</html>

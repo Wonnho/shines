@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주식 정보</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px;
+      table-layout: fixed; /* 열의 크기를 고정합니다. */
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<table id="stockTable">
+  <tr>
+    <th>기업명</th>
+    <th>주가</th>
+    <th>변동</th>
+    <th>변동률</th>
+  </tr>
+  <tr>
+    <td>삼성전자</td>
+    <td id="stockPrice">73,200</td>
+    <td id="priceChange">0</td>
+    <td id="percentageChange">0.00%</td>
+  </tr>
+</table>
+
+<script>
+  function updateStock() {
+    // 현재 주가
+    const currentPrice = parseFloat($('#stockPrice').text().replace(',', ''));
+
+    // 랜덤한 변동률 생성 (-5%에서 5% 범위 내)
+    const randomChangePercentage = (Math.random() - 0.5) * 10;
+
+    // 주가 변동 (소수점 이하 없는 정수로 변경)
+    const priceChange = Math.round(currentPrice * (randomChangePercentage / 100));
+    const newPrice = currentPrice + priceChange;
+
+    // 변동 및 변동률 업데이트
+    $('#priceChange').text(priceChange);
+    // newPrice.toFixed(0): 소수점이하는 버린다.
+    // replace(/\B(?=(\d{3})+(?!\d))/g, ','): 숫자를 돈으로 표현하기 위해 3자리마다 ,를 추가한다.
+    // 정규식 문법으로 정확한 문법은 데이터 분석시간에 배우므로 지금은 해당 기능을 사용하자
+    $('#stockPrice').text(newPrice.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+    // 변동률을 소수점 2자리까지 표시한다.
+    $('#percentageChange').text(randomChangePercentage.toFixed(2) + '%');
+  }
+
+  // 초기 업데이트
+  updateStock();
+
+  // 랜덤한 시간 주기로 주가 업데이트
+  // 업데이트 주기 상수
+  const MIN_INTERVAL = 1000; // 최소 1초
+  const MAX_INTERVAL = 3000; // 최대 3초
+  function scheduleUpdate() {
+    // 1초에서 3초사이의 랜덤 값 발생
+    // const randomInterval = Math.floor(Math.random() * (MAX_INTERVAL - MIN_INTERVAL + 1) + MIN_INTERVAL); // 1000ms ~ 3000ms 사이의 랜덤값
+    const randomInterval = Math.random() * (MAX_INTERVAL - MIN_INTERVAL + 1) + MIN_INTERVAL; // 1000ms ~ 3000ms 사이의 랜덤값
+    // Math.random(): 0~1사이의 랜덤값 발생 (0초과 1미만)
+    // Math.random() * (MAX_INTERVAL - MIN_INTERVAL): 0~2000 사이의 랜덤값 발생
+    // Math.random() * (MAX_INTERVAL - MIN_INTERVAL + 1): 0초과 2000 이하의 랜덤값 발생 (random 함수는 경계값을 포함하지 X)
+    // Math.random() * (MAX_INTERVAL - MIN_INTERVAL + 1) + MIN_INTERVAL: 1000(1초)~3000(3초)의 랜덤값 발생
+    setTimeout(function() {
+      updateStock();
+      scheduleUpdate();
+    }, randomInterval);
+  }
+
+  scheduleUpdate();
+</script>
+
+</body>
+</html>
