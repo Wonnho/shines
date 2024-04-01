@@ -1,0 +1,40 @@
+a.new-window {
+    padding-right: 18px;
+    background: #6528e0;
+}
+
+.icon-links a	{ background:0 50% no-repeat;padding-left:20px; }
+a.presentation	{ background-image: url(../images/presentation.png); }
+a.video			{ background-image: url(../images/video.png); }
+a.pdf			{ background-image: url(../images/pdf.png);	}
+a.image			{ background-image: url(../images/image.png); }
+
+#tabs {
+    overflow:hidden;
+    zoom:1;
+}
+
+#tabs li {
+    display: block;
+    list-style: none;
+    margin:0;
+    padding: 0;
+    float: left;
+}
+
+#tabs li a {
+    display: block;
+    padding: 2px 5px;
+    border: 2px solid #ccc;
+    text-align: center;
+
+}
+
+.tab-section {
+    padding: 10px;
+    border: 2px solid #ccc;
+}
+#tabs li a.current {
+    background: #003E00;
+    color: #000;
+}

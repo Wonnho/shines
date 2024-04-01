@@ -51,10 +51,10 @@
 
             if (CATEGORY_STATUS === 1) {
                 // 상위 카테고리에 따른 응답 추가
-                if (userMessage.toLowerCase().includes('1') || userMessage.toLowerCase().includes('신발')) {
+                if (userMessage.includes('1') || userMessage.includes('신발')) {
                     showSubCategories(['운동화', '구두', '샌들']);
                     CATEGORY_STATUS = 2;
-                } else if (userMessage.toLowerCase().includes('2') || userMessage.toLowerCase().includes('의류')) {
+                } else if (userMessage.includes('2') || userMessage.includes('의류')) {
                     showSubCategories(['여성의류', '남성의류', '유아의류']);
                     CATEGORY_STATUS = 2;
                 } else {
@@ -65,7 +65,7 @@
                 }
             } else if (CATEGORY_STATUS === 2) {
                 // 사용자가 하위 카테고리에 대해 물어보는 경우
-                const selectedCategory = userMessage.toLowerCase();
+                const selectedCategory = userMessage;
                 if (selectedCategory.includes('운동화') || selectedCategory.includes('구두') || selectedCategory.includes('샌들')) {
                     sendSubCategoryMessage(selectedCategory, ['운동화', '구두', '샌들']);
                 } else if (selectedCategory.includes('여성의류') || selectedCategory.includes('남성의류') || selectedCategory.includes('유아의류')) {
@@ -74,7 +74,8 @@
                     // 다른 키워드에 대한 기본 응답
                     appendMessage('<br>Chatbot', '<br>죄송합니다. 입력하신 정보로는 처리할 수 없습니다.');
                 }
-                CATEGORY_STATUS = 1;
+               // CATEGORY_STATUS = 1;
+
             }
 
             userInput.val('');
@@ -91,7 +92,7 @@
         }
 
         function sendSubCategoryMessage(selectedCategory, subCategories) {
-            const selectedSubCategory = subCategories.find(sub => selectedCategory.includes(sub.toLowerCase()));
+            const selectedSubCategory = subCategories.find(sub => selectedCategory.includes(sub));
             if (selectedSubCategory) {
                 setTimeout(function() {
                     appendMessage('<br>Chatbot', `<br>${selectedSubCategory}에 대한 정보를 제공합니다.`);

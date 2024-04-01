@@ -45,27 +45,27 @@
             appendMessage('User', userMessage);
 
             // 쇼핑 관련 키워드에 따른 응답 추가
-            if (userMessage.toLowerCase().includes('신발')) {
+            if (userMessage.includes('신발')) {
                 // 신발 관련 응답
                 setTimeout(function() {
                     appendMessage('Chatbot', '신발 매장에 오신 것을 환영합니다! 어떤 종류의 신발을 찾고 계신가요?');
                 }, 500);
-            } else if (userMessage.toLowerCase().includes('의류')) {
+            } else if (userMessage.includes('의류')) {
                 // 의류 관련 응답
                 setTimeout(function() {
                     appendMessage('Chatbot', '의류 매장에 오신 것을 환영합니다! 원하시는 스타일이나 종류가 있나요?');
                 }, 500);
-            } else if (userMessage.toLowerCase().includes('가전제품')) {
+            } else if (userMessage.includes('가전제품')) {
                 // 가전제품 관련 응답
                 setTimeout(function() {
                     appendMessage('Chatbot', '가전제품 매장에 오신 것을 환영합니다! 어떤 제품을 찾고 계신가요?');
                 }, 500);
-            } else if (userMessage.toLowerCase().includes('액세서리')) {
+            } else if (userMessage.includes('액세서리')) {
                 // 액세서리 관련 응답
                 setTimeout(function() {
                     appendMessage('Chatbot', '액세서리 매장에 오신 것을 환영합니다! 어떤 종류의 액세서리를 찾고 계신가요?');
                 }, 500);
-            } else if (userMessage.toLowerCase().includes('식품')) {
+            } else if (userMessage.includes('식품')) {
                 // 식품 관련 응답
                 setTimeout(function() {
                     appendMessage('Chatbot', '식품 매장에 오신 것을 환영합니다! 어떤 종류의 식품을 찾고 계신가요?');
