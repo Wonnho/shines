@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 복합 대입 연산자 </title>
+<script>
+    // 전위 증감
+    let x = 5;
+    let br = '<br>';
+    let p = '<p>';
+    // document.writeln('x: ' + x + '<br>');
+    document.writeln('x: ' + x + br);
+    document.writeln('x: ' + (++x) + br); // 값을 먼저 증가 시킨다.
+    let y = x;
+    // let y = x+1;
+    document.writeln('y: ' + y + p);
+    // x는 이제 6, y는 6
+
+    let a = 10;
+    document.writeln('a: ' + a + br);
+    document.writeln('a: ' + (--a) + br); // 값을 먼저 감소 시킨다.
+    let b = a;
+    document.writeln('b: ' + b + p);
+    // a는 이제 9, b는 9
+
+    // 후위 증감
+    let m = 8;
+    document.write('m: ' + m + br);
+    document.writeln('m: ' + (m++) + br); // 현재의 값을 사용하고 다음 라인에서 값을 증가 시킨다.
+    let n = m;
+    document.writeln('n: ' + n + p);
+    // m는 이제 9, n은 8
+
+    let o = 15;
+    document.writeln('o: ' + o + br);
+    document.writeln('o: ' + (o--) + br); // 현재의 값을 사용하고 다음 라인에서 값을 감소 시킨다.
+    let q = o
+    document.writeln('q: ' + q + br);
+    // p는 이제 14, q는 15
+
+</script>
+</head>
+<body>
+</body>
+</html>

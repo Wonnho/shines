@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연습</title>
+    <style>
+      #wrapper {
+        width: 700px;
+        margin: 0 auto;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        font-size: 30px;
+      }
+      label {
+        font-size: 25px;
+      }
+
+      header {
+        width: 680px;
+        height: 100px;
+        border: 5px double black;
+        border-top-left-radius: 70px 50px;
+        box-shadow: -2px -2px 5px 0px black;
+      }
+      section {
+        width: 680px;
+        height: 350px;
+        border: 5px double black;
+        background: url("images/forest.jpg");
+        background-size: cover;
+        position: relative;
+      }
+      #bottomleft {
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+
+      footer {
+        width: 680px;
+        height: 100px;
+        padding: 1px;
+        border: 5px double black;
+        border-bottom-right-radius: 70px 50px;
+        box-shadow: 2px 2px 5px 0px black;
+        text-align: center;
+        overflow: hidden;
+      }
+      footer:hover{
+          height: auto;
+          overflow: visible;
+      }
+      footer h2 {
+        text-indent: 50px;
+        text-align: left;
+        font-family: "JetBrains Mono ExtraLight";
+        font-size: 2em;
+      }
+      footer ul {
+          list-style-type: none;
+      }
+      footer ul li {
+          display: inline;
+          margin: 3px;
+      }
+      footer input {
+          margin: 20px;
+      }
+    </style>
+</head>
+<body>
+<!-- 전체 감싸기 -->
+    <div id="wrapper">
+<!-- 헤더 시작점 -->
+    <header>
+      <ul>
+        <li>
+         제목 : Forest
+        </li>
+        <li style="float: right; margin-right: 20px">
+          <label>평가:</label>
+          <meter min="0" max="100" low="20" value="15"></meter>
+        </li>
+      </ul>
+    </header>
+<!-- 헤더 끝 -->
+<!-- 본문 스타트 -->
+    <section>
+        <img id="bottomleft" src="images/human.png" width="150px" height="200px">
+
+    </section>
+<!-- 본문 끝 -->
+<!-- 하단부 스타트 -->
+    <footer>
+      <h2>이 작품을 평가해주세요</h2>
+        <ul>
+            <li><label>별점</label>
+                <select>
+                    <option>★</option>
+                    <option>★★</option>
+                    <option>★★★</option>
+                    <option>★★★★</option>
+                    <option>★★★★★</option>
+                </select>
+            </li>
+            <li><label>한줄 평가</label>
+            <input type="text" size="30" placeholder="평가를 해주세요">
+            </li>
+        </ul>
+        <input type="submit" value="평가하기">
+    </footer>
+<!-- 하단부 끝 -->
+    </div>
+</body>
+</html>

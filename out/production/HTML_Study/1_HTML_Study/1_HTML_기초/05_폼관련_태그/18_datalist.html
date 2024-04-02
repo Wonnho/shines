@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title> 웹 폼</title>
+    <style>
+        body {
+            background-color:#fff;
+        }
+        form fieldset{
+            margin-bottom:25px;
+        }
+        form legend{
+            font-size:15px;
+            font-weight:600;
+        }
+        .reg {
+            font-size:14px;
+            width:110px;
+            color:#390;
+            font-weight:bold;
+            float:left;
+            text-align:right;
+            margin-right:10px;
+        }
+        form ul li{
+            list-style:none;
+            margin: 15px 0;
+            font-size:14px;
+        }
+    </style>
+</head>
+<!--
+input-datalist-option: select와 유사하게 option 항목을 선택할 수 있지만
+초기 목록에서 값을 볼 수 없고 펼치거나 값을 입력해서 매치되는 값을 찾을 수 있다.
+option 값이 많을 경우 효과적일 수 있다.
+크롬 브라우저에서 확인할 것
+-->
+<body>
+<h1>여름방학 특강 신청</h1>
+<form>
+    <fieldset>
+        <legend>수강 신청인</legend>
+        <ul>
+            <li>
+                <label class="reg" for="id">학번</label>
+                <input type="text" id="id" autofocus>
+            </li>
+            <li>
+                <label class="reg" for="name">이름</label>
+                <input type="text" id="name">
+            </li>
+            <li>
+                <label class="reg" for="class">학과</label>
+                <select id="class">
+                    <!--                       optgroup으로 option 요소를 그룹화 -->
+                    <optgroup label="공과대학">
+                        <option value="archi">건축공학과</option>
+                        <option value="mechanic">기계공학과</option>
+                        <option value="indust">산업공학과</option>
+                        <option value="elec">전기전자공학과</option>
+                        <option value="computer">컴퓨터공학과</option>
+                        <option value="chemical">화학공학과</option>
+                    </optgroup>
+                    <optgroup label="인문대학">
+                        <option value="history">사학과</option>
+                        <option value="lang">어문학부</option>
+                        <option value="philo">철학</option>
+                    </optgroup>
+                </select>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>수강 과목을 선택하세요</legend>
+        <ul>
+            <li>
+                <span class="reg">관심분야</span>
+                <label for="interest"></label>
+<!--
+    input-datalist-option: select와 유사하게 option 항목을 선택할 수 있지만
+    초기 목록에서 값을 볼 수 없고 펼치거나 값을 입력해서 매치되는 값을 찾을 수 있다.
+    option 값이 많을 경우 효과적일 수 있다.
+    크롬에서 실행
+    -->
+            <input type="text" id="interest" list="choices">
+            <datalist id="choices">
+                <option value="grammer" label="문법"></option>
+                <option value="voca" label="어휘"></option>
+                <option value="speaking" label="회화"></option>
+                <option value="listening" label="리스닝"></option>
+                <option value="news" label="뉴스청취"></option>
+                </datalist>
+            </li>
+        </ul>
+    </fieldset>
+</form>
+</body>
+</html>

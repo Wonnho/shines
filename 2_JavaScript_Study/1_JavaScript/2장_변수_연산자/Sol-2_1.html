@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>뺄셈 프로그램</title>
+</head>
+<body>
+
+<script>
+    /*
+두 수의 뺄셈을 계산하여 화면에 출력하는 프로그램을 작성하세요.
+
+- 사용자 입력은 prompt 함수를 사용한다.
+- 출력은 document.write 사용
+
+* 브라우저 입력 예시
+ 첫 번째 프롬프트:
+첫 번째 숫자를 입력하세요
+1
+
+ 두 번째 프롬프트:
+두 번째 숫자를 입력하세요
+2
+
+* 브라우저 출력 예시
+두 수의 차는: -1
+     */
+    // 사용자로부터 두 수를 입력받음
+    var input1 = prompt("첫 번째 숫자를 입력하세요:");
+    var input2 = prompt("두 번째 숫자를 입력하세요:");
+
+    // 입력받은 문자열을 숫자로 변환
+    var num1 = parseFloat(input1);
+    var num2 = parseFloat(input2);
+
+    // 두 수를 더하고 결과를 출력
+    var result = num1 - num2;
+    document.write("두 수의 차는: " + result);
+</script>
+
+</body>
+</html>

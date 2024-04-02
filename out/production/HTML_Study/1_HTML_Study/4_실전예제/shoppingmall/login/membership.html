@@ -1,0 +1,88 @@
+<!doctype html>
+
+
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 회원가입</title>
+<!--    <link href="../css/main.css" rel="stylesheet" type="text/css">-->
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            justify-content: center;
+        }
+
+        label {
+        display: block;
+        margin-bottom: 6px;
+        /*without display: blcok, margin-bottom does not work because of label is an inline
+        element which is respected. By display: block, margin are effective*/
+        }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 9px;
+    }
+
+    input[type="password"]::after {
+        content:"8~20자리 이내의 영문과 숫자 혼합";
+        color: #FFFFFF;
+        font-size:x-small;
+        padding:2px 4px;
+        margin:0 10px;
+        background-color: #ff3333;
+    }
+
+    input[type="submit"] {
+        background-color: #99cc33;
+        width: 100px;
+        margin-top: 11px;
+        border-radius: 5px;
+    }
+    small {
+       display: block;
+        margin-top: -7px;
+    }
+    </style>
+</head>
+<body>
+<h1>회원 가입</h1>
+<form>
+
+        <!-- text에 대하여
+        size: 화면에 표시하는 길이, minlength: 최소 길이,
+        maxlength: 전체 입력 텍스트 최대길이를 제한            -->
+            <label for="user_id">아이디   </label>
+          <input type="text" id="user_id" size="20" minlength="8" maxlength="15" autofocus placeholder="8자에서 20이내의 아이디를 작성하세요">
+
+
+            <label for="user_email">이메일</label>
+            <input type="email" id="user_email"
+            placeholder="이메일형식 hong@gmail.com">
+
+            <label for="user_pwd">비밀번호 </label>
+                <input type="password" id="user_pwd">
+          <small style="color:red;"> 8~20자리 이내의 영문과 숫자 혼합</small><br>
+
+            <label for="check_pwd" >비밀번호 확인</label>
+             <input type="password" id="check_pwd" placeholder="위와 동일한 비밀번호를 입력하세요">
+
+        <input type="submit" value="회원가입">
+    </form>
+</body>
+</html>

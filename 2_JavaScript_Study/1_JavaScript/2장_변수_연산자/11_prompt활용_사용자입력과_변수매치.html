@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>덧셈 프로그램</title>
+</head>
+<body>
+
+<script>
+  // 사용자로부터 두 수를 입력받음
+  // prompt 사용자 입력을 화면에서 받고 입력한 값은 문자로 반환
+  var firstNumber = prompt("첫 번째 숫자를 입력하세요:");
+  var secondNumber = prompt("두 번째 숫자를 입력하세요:");
+
+  // 입력받은 문자열을 숫자로 변환
+  // Step1] 1, 2 두수를 입력해보자
+  // Step2] 1.23, 4.23 두 소수를 입력해보자
+  // parseInt: 문자를 정수(소수점이 없는 숫자)로 변환해 주는 자바스크립트 내장 함수
+  // 정수: Integral Number
+  // 주의사항: 실수(소수점이 있는 숫자)를 입력시 소수점 이하는 유실이 된다.
+  var num1 = parseInt(firstNumber);
+  var num2 = parseInt(secondNumber);
+
+  // 정확한 소수점 연산을 위해 아래 함수를 사용해 보자
+  // parseFloat: 문자를 실수로 변경
+  // 실수: Floating Number
+  // var num1 = parseFloat(firstNumber);
+  // var num2 = parseFloat(secondNumber);
+
+  // 두 수를 더하고 결과를 출력
+  var sum = num1 + num2;
+  document.write("두 수의 합은: " + sum);
+</script>
+
+</body>
+</html>

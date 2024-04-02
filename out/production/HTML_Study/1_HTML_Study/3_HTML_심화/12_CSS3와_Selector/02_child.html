@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>요안도라</title>
+    <style>
+/*
+    *자식 선택자(child selector): "자식에게만" 스타일을 상속 하고자 할 때 (손자 아래는 적용 x)
+    -기본형:부모요소 > 자식요소
+ */
+        #container ul { /*  반드시 container-ul 구조이어야 함*/
+            border : 1px dotted blue; /*    #container 요소의 모든 하위 ul 요소에 파란 1px 실선*/
+        }
+    </style>
+</head>
+<body>
+<section id="container">
+    <header><h1>예약 방법 및 요금</h1></header>
+    <p> 요안도라에 예약하려면?
+    <ul>              <!-- 자식 하위요소 -->
+        <li> 예약 방법
+            <ul>          <!-- 손자 하위요소 -->
+                <li>직접 통화</li>
+                <li>문자 남기기</li>
+            </ul>
+        </li>
+        <li>요금
+            <ul>
+                <li>1인 : 40,000원</li>
+                <li>2인 : 60,000원</li>
+                <li>3인 : 80,000원</li>
+                <li>4인 : 100,000원</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+</body>
+</html>

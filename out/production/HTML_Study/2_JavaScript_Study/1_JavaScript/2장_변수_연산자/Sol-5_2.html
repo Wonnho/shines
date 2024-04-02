@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평균 계산</title>
+</head>
+<body>
+
+<script>
+    // 변수 선언 및 사용자 입력 받기
+    var number1 = parseFloat(prompt("첫 번째 숫자를 입력하세요:"));
+    var number2 = parseFloat(prompt("두 번째 숫자를 입력하세요:"));
+    var number3 = parseFloat(prompt("세 번째 숫자를 입력하세요:"));
+
+    // 숫자들의 평균 계산
+    var average = (number1 + number2 + number3) / 3;
+
+    // 결과를 웹 페이지에 출력
+    document.write("<p>입력한 숫자들: " + number1 + ", " + number2 + ", " + number3 + "</p>");
+    document.write("<p>숫자들의 평균: " + average + "</p>");
+</script>
+
+</body>
+</html>
+

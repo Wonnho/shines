@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>두 수의 평균 계산</title>
+</head>
+<body>
+
+<script>
+    // 사용자에게 두 개의 숫자 입력 받기
+    var G1Student1 = 60;
+    var G1Student2 = 70;
+
+    var G2Student1 = 40;
+    var G2Student2 = 50;
+
+    //  Group1 평균 계산
+    var G1GroupAverage = (G1Student1 + G1Student2) / 2;
+    // 디버깅이 불가능하거나 변수의 변경 이력을 추적하고 싶을때 개발자도구 콘솔창에서 중간에 모니터링 하고자 하는 값을 확인할 수 있다.
+    // 개발자 모드: F12 - Console 탭 선택
+    console.log(G1GroupAverage);
+    //  Group2 평균 계산
+    var G2GroupAverage = (G2Student1 + G2Student2) / 2;
+    console.log(G2GroupAverage);
+
+    var TotalAverage = ( (G1Student1+G1Student2)/2 + ( (G2Student1+G2Student2) * 1.1) / 2 ) / 2;
+
+    // 결과를 웹 페이지에 출력
+    document.write("<p>전체 평균(G2그룹 어드벤티지 적용): " + TotalAverage);
+</script>
+
+</body>
+</html>
+</script>
+
+</body>
+</html>

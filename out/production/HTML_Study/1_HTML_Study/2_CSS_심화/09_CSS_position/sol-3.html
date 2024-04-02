@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 블로그</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        #header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #nav {
+            background-color: #666;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .article {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 30px;
+            width: 80%;
+        }
+
+        .article h2 {
+            color: #333;
+        }
+
+        .article p {
+            color: #555;
+        }
+
+        .article a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .article a:hover {
+            text-decoration: underline;
+        }
+
+        #footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <h1>HK Lee의 HTML 블로그</h1>
+</div>
+
+<div id="nav">
+    <ul>
+        <li><a href="#">홈</a></li>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
+<div id="section">
+    <div class="article">
+        <h2>HTML 기초</h2>
+        <p>HTML은 웹 페이지의 구조를 정의하는 마크업 언어입니다. 이 글에서는 HTML의 기초에 대해 알아보겠습니다.</p>
+        <a href="#">더 읽기</a>
+    </div>
+
+    <div class="article">
+        <h2>CSS 스타일링</h2>
+        <p>CSS는 웹 페이지의 스타일을 정의하는 스타일 시트 언어입니다. 이 글에서는 CSS를 사용한 웹 페이지 스타일링에 대해 알아보겠습니다.</p>
+        <a href="#">더 읽기</a>
+    </div>
+
+    <div class="article">
+        <h2>JavaScript 프로그래밍</h2>
+        <p>JavaScript는 웹 페이지를 동적으로 만들고 사용자와 상호작용하는 데 사용되는 프로그래밍 언어입니다. 이 글에서는 JavaScript 프로그래밍의 기초를 소개합니다.</p>
+        <a href="#">더 읽기</a>
+    </div>
+</div>
+
+<div id="footer">
+    <p>&copy; 2024 HK Lee (이현구) HTML 블로그 판권 소유.</p>
+</div>
+</body>
+</html>

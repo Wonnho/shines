@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num1;
+    var num2;
+
+    var p='<p>';
+    document.write('에러가 나는 곳을 빨리 찾고 싶어요.'+p);
+    document.write('아래 자바 스크립트를 실행하려고 합니다.');
+    document.write('<pre>' +
+        '    num1=10;\n' +
+        '    result = num1+num2;\n' +
+        '    result = result * 1.2;'+
+        '<p>코드 상의 에러를 5초만에 찾아보세요!</p>'+
+        '</pre>')
+    // 개발자 모드 Console 탭을 확인해 보세요~!
+    num1=10;
+    result = num1+num2;
+    result = result * 1.2;
+    document.write(result);
+</script>
+</body>
+</html>

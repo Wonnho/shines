@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+<!--    <link href="../css/main.css" rel="stylesheet" type="text/css">-->
+    <style>
+        * {
+            margin: 20px;
+
+        }
+        ul {
+            display: inline-block;
+        }
+
+       ul li {
+            list-style: none;
+           display: inline;
+        }
+
+        .trans1 {
+            text-transform: uppercase;
+        }
+        fieldset {
+            background-color: #FAFAD2;;
+        }
+
+        legend {
+            text-shadow: 5px 5px 3px #DEB887,0 -5px 4px #f33;
+        }
+
+        .pwd {
+            font:icon;
+        }
+
+        .membership {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+    <legend>로그인</legend>
+    <ul class="login">
+        <li>
+            <label for="id">아이디 </label>
+            <input type="text" id="id"></li>
+        <li class="pwd">
+            <label for="pwd">비밀번호</label>
+            <input type="password" id="pwd">
+        </li>
+    </ul>
+    </fieldset>
+
+    <li>
+        <p>회원이 아니신가요?</p>
+
+        <label for="membership">회원가입 </label>
+        <input type="text" id="membership">
+    </li>
+
+</form>
+
+
+</body>
+</html>

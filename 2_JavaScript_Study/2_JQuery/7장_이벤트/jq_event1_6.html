@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="../js/jquery.js"></script>
+<script>
+$(function( ) {
+	$(".btn1").on({
+		// 마우스포인트가 요소위에 위치할 경우
+		"mouseover" : function( ) {
+			$(".txt1")
+			.css({"background-color":"yellow"});
+		},
+		// 마우스포인트가 요소밖에 위치할 경우
+		"mouseout" : function( ) {
+			$(".txt1")
+			.css({"background":"none"});
+		}
+	});
+
+	// hover: mouseover 이벤트를 정의
+	// 이벤트 핸들러를 두개 등록하게 되면
+	// 첫번째 핸들러는 이벤트 발생했을 때 수행
+	// 두번째 핸들러는 이벤트 종료시 수행
+	// 따라서 두번째 핸들러는 mouseout의 효과를 낸다.
+	$(".btn2").hover(function( ) {
+		$(".txt2")
+		.css({"background-color":"aqua"});
+	}, function(){
+		$(".txt2")
+		.css({"background":"none"});
+	});
+});
+</script>
+</head>
+<body>
+	<p><button class="btn1">Mouse Over/Mouse Out</button></p>
+	<p class="txt1">내용1</p>
+	<p><button class="btn2">Hover</button></p>
+	<p class="txt2">내용2</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>뺄셈 프로그램</title>
+</head>
+<body>
+
+<script>
+    // 사용자로부터 두 수를 입력받음
+    var num1 = prompt("첫 번째 숫자를 입력하세요:");
+    var num2 = prompt("두 번째 숫자를 입력하세요:");
+
+    // 입력받은 문자열을 숫자로 변환
+    // num1이 문자형에서 숫자형으로 자동형변환
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+
+    // 두 수를 더하고 결과를 출력
+    var result = num1 - num2;
+    document.write("두 수의 차는: " + result);
+</script>
+
+</body>
+</html>

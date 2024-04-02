@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>비디오 재생하기</title>
+		<style>
+			body {
+				margin-top:20px;
+				margin-left:50px;
+			}
+		</style>
+</head>
+<body>
+	<video controls>
+		<source src="../../../../../../../Users/EZEN/Downloads/11_HTML5와_Multimedia/media/Painting.mp4" type="video/mp4">
+		<source src="../../../../../../../Users/EZEN/Downloads/11_HTML5와_Multimedia/media/Painting.webm" type="video/webm">
+<!--
+ * 자막
+ - HTML5에서는 srt 지원
+ - 모든 브라우저에서 공식적으로 지원하는 형식은 WebVTT 형식
+-->
+		<track src="../../../../../../../Users/EZEN/Downloads/11_HTML5와_Multimedia/media/Painting.vtt" srclang="ko" label="Korean" default>
+	</video>
+</body>
+</html>

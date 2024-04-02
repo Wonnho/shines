@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>두 수의 평균 계산</title>
+</head>
+<body>
+
+<script>
+    // 사용자에게 두 개의 숫자 입력 받기
+    // 크롬브라우저로 디버깅하는 방법
+    // 개발자도구 F12 - Source 탭 선택
+    // 페이지탭 트리의 가장 마지막 노드 선택
+    // 소스코드 옆 라인번호 마우스 클릭
+    // 페이지 새로고침 - 중단점으로 이동되는 것을 확인
+    // 디버깅 관련 메뉴는 우측 상단 아이콘 참고
+    // * 변수 모니터링
+    //  - 전체 변수 리스트는 Global 탭의 최상단 참고
+    // * 특정 변수만 모니터링Watch 탭 확장
+    //  - Watch 탭을 확장하여 모니터링 할 변수 + 아이콘으로 등록
+    var G1Student1 = 60;
+    var G1Student2 = 70;
+
+    var G2Student1 = 40;
+    var G2Student2 = 50;
+
+    //  Group1 평균 계산
+    var G1GroupAverage = (G1Student1 + G1Student2) / 2;
+    //  Group2 평균 계산
+    var G2GroupAverage = (G2Student1 + G2Student2) / 2;
+
+    var TotalAverage = ( (G1Student1+G1Student2)/2 + ( (G2Student1+G2Student2) * 1.1) / 2 ) / 2;
+
+    // 결과를 웹 페이지에 출력
+    document.write("<p>G1 그룹 평균: " + G1GroupAverage);
+    document.write("<br>G2 그룹 평균: " + G2GroupAverage);
+    document.write("<p>전체 평균(G2그룹 어드벤티지 적용): " + TotalAverage);
+</script>
+
+</body>
+</html>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+     <meta charset="utf-8">
+		 <title> 웹 폼</title>
+     <style>
+	 body {
+		background-color:#fff; 
+	 }
+ 	 ul li{
+		list-style:none; 
+		margin: 15px 0;	
+		font-size:14px;	
+	 }
+     </style>
+  </head>
+  <body>
+  	<ul>
+      <li>
+      	<label>점유율 0.8 </label>
+	  	<!-- 전체 크기 1을 기준으로 0.8만큼 차지합니다 -->
+		<meter value="0.8"></meter>
+      </li>
+      <li>
+      	<label>사용량 64%</label>
+		<!-- 전체 100 중에서 64만큼 차지합니다  -->
+		<meter min="0" max="100" value="64"></meter>
+      </li>
+      <li>
+      	<label>트래픽 A 초과 </label>
+		<!--
+		min: 컨트롤 바의 최소값, max: 컨트롤 바의 최대값
+		low, high: 임계값의 최소값과 최대값
+		value가 low보다 작다면 빨간색
+		value가 low~high 녹색
+		value가 high보다 크다면 노란색
+		브라우저 종류 또는 브라우저 버전 따라서 표현되는 색깔이 다를 수 있다.
+		-->
+      	<meter min="1024" max="10240" low="2048" high="8192" value="9216"></meter>
+        <label>트래픽 A 정상</label>
+        <meter min="1024" max="10240" low="2048" high="8192" value="5216"></meter>
+          <label>트래픽 A 부족</label>
+          <meter min="1024" max="10240" low="2048" high="8192" value="2000"></meter>
+      </li>
+      <li>
+      	<label>트래픽 B 부족</label>
+		<!-- optimum 적정도
+		value가 optimum보다 작으면 노란색 (브라우저 종류 또는 브라우저 버전에 따라 적용 안될 수 있다.)
+		value가 optimum보다 크면 녹색
+		 -->
+        <meter value="0.5" optimum="0.8"></meter>
+        <label>트래픽 B 정상</label>
+        <meter value="0.9" optimum="0.8"></meter>
+      </li>
+    </ul>
+  </body>
+</html>

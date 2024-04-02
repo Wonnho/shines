@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title> 비교 연산자 </title>
+	<script>
+		var a = 10;
+		var b = 20;
+		var c = 10;
+		var d = "20";
+		// var d = "이십";
+		var e = 20;
+		var result;
+
+		result = a > b;  // false
+		document.write(result, "<br>");
+		result = a < b;  // true
+		document.write(result, "<br>");
+		// a가 b보다 작거나 같은 경우
+		// 참고: 크거나 같은 경우 >=
+		result = a <= b; // true
+		document.write(result, "<br>");
+		a=20;
+		result = a <= b; // true
+		document.write(result, "<br>");
+		// a == b => a와 b가 같은 경우
+		result = b == e;  // true
+		document.write(result, "<br>");
+// 다른 타입에 대한 비교이기 때문에 결과를 예측하기 어렵다.
+		result = b == d;  // true
+		document.write(result, "<br>");
+
+		// a != b => a와 b가 다른 경우 true
+		// 현재 a가 20 b가 20
+		result = a != b;   // true
+		document.write(result, "<br>");
+	</script>
+</head>
+<body>
+</body>
+</html>

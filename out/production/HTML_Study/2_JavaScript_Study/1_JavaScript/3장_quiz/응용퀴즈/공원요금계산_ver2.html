@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var age=parseInt(prompt("몇살이에요?"));
+
+    if(age<0 ) {
+        document.write("다시입력하세요");
+    }
+    else if(age>0 && age<=3) {
+        document.write("무료");
+    }else if(age<14) {
+        document.write("2000원");
+
+    }  else if(age<18) {
+        document.write("3000원");
+
+    } else if(age<65) {
+        document.write("5000원");
+    } else {
+        document.write("무료");
+    }
+</script>
+</body>
+</html>
