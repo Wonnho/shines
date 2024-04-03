@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Fluid Grid Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #wrapper {
+            width: 96%;
+            margin: 0 auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        header {
+            width: 100%;
+            height: 120px;
+            background-color: #066cfa;
+            border-bottom: 1px solid black;
+            font-size: 20px;
+        }
+        .header-text{
+            font-size: 24px; /* 고정폭 글꼴의 폰트 크기를 24px로 변경 */
+            color: white;
+            text-align: center;
+            line-height: 120px;
+        }
+        .content {
+            float: left;
+            width: 62.5%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: #ffd800;
+            text-align: center;
+            line-height: 380px;
+            font-size: 16px; /* 고정폭 글꼴의 폰트 크기를 18px로 변경 */
+        }
+        .right-side {
+            float: right;
+            width: 31.25%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: #00ff90;
+            text-align: center;
+            line-height: 380px;
+            font-size: 18px; /* 고정폭 글꼴의 폰트 크기를 18px로 변경 */
+        }
+        footer {
+            clear: both;
+            width: 100%;
+            height: 120px;
+            background-color: #c3590a;
+            text-align: center;
+            line-height: 120px;
+            font-size: 18px; /* 고정폭 글꼴의 폰트 크기를 18px로 변경 */
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <header>
+        <h1 class="header-text">가변 그리드 레이아웃</h1>
+    </header>
+    <section class="content">
+        <h4>본문</h4>
+    </section>
+    <aside class="right-side">
+        <h4>사이드바</h4>
+    </aside>
+    <footer>
+        <h4>푸터</h4>
+    </footer>
+</div>
+</body>
+</html>
+ml>

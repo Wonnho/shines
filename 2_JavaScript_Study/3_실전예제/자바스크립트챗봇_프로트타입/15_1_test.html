@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = "안녕하세요. 반갑습니다."
+        window.speechSynthesis.speak(speech);
+    });
+</script>
+</body>
+</html>

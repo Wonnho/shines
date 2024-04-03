@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<button id="speakButton">음성 재생</button>
+<script>
+    $(document).ready(function() {
+        $('#speakButton').click(function() {
+            const speech = new SpeechSynthesisUtterance();
+            speech.text = '안녕하세요';
+            window.speechSynthesis.speak(speech);
+        });
+    });
+</script>
+</body>
+</html>
