@@ -3,7 +3,7 @@ const bodyParser=require('body-parser')
 const {join} = require("path");
 const path = require("path");
 const app=express();
-const PORT=3000
+const PORT=3001
 const session=require('express-session');
 app.set('view engine','ejs');
 
@@ -69,23 +69,63 @@ app.get('/', async (req, res) => {
         conn=await oracledb.getConnection(dbConfig);
 
         let result=await conn.execute(
+        //paging
+            `select count(*) as total from posts`
+            );
+
+        const totalPosts=result.rows[0];
+        const postsPerPage=10;
+        const totalPages=Math.ceil(totalPosts/postsPerPage);
+        let currentPage=req.query.page?parseInt(req.query.page):1;
+        const startRow=(currentPage-1)*postsPerPage+1;
+        const endRow=currentPage*postsPerPage;
+
+        result=await conn.execute(
+
            `select title,writer,to_char(created_at,'YYYY-MM-DD'),views
         from (
             select p.id,p.title,u.name as writer,p.created_at,p.views,ROW_NUMBER() OVER ( ORDER BY p.created_at desc)as rn
         from posts p
         join users u
         on p.author_id=u.id)
-        where rn between 1 and 10`
+        where rn between : startRow and :endRow`,{
+               startRow:startRow,
+                endRow:endRow
+            },
+            {
+             //   outFormat: oracledb.OUT_FORMAT_OBJECT
+            }
         );
-        console.log(result.rows)
+
+        const MAX_PAGE_LIMIT=5;
+        const startPage = (totalPages - currentPage) < MAX_PAGE_LIMIT ? totalPages - MAX_PAGE_LIMIT + 1 : currentPage;
+        const endPage = Math.min(startPage + MAX_PAGE_LIMIT - 1, totalPages);
+
+        console.log(result.rows) // 1~10 정보 조회
+        console.log(result.rows[0]) // 1~10개중 첫번째
+        console.log(result.rows[0][0])  // 첫번째의 첫 행
+
+      //  res.sendFile(path.join(__dirname, 'public', 'login.html')); // Send the HTML file
+        res.render('index',
+            {posts:result.rows,
+            startPage: startPage,
+            currentPage: currentPage,
+            endPage: endPage,
+            totalPages: totalPages,
+            maxPageNumber: MAX_PAGE_LIMIT
+        });
+
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
     }
     finally {
         if(conn) {
+            try{
             await conn.close();
-        } else { }
+        } catch (err) {
+            console.error(err)}
+        }
     }
 
   //  res.sendFile(path.join(__dirname, 'public', 'login.html')); // Send the HTML file
