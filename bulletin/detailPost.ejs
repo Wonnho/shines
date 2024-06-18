@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>글 상세 페이지</title>
+
+    <style>
+        table {
+            width: 60%;
+            margin: 120px auto;
+            border-collapse: collapse;
+        }
+
+        th,td {
+            border: 1px solid #007bff;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .author {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 16px;
+            padding: 20px;
+        }
+
+        .content {
+            margin-left: 20px;
+        }
+
+        .head {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        /*가운데 정렬 스타일 추가 */
+        .center {
+            text-align: center;
+        }
+        /* 버튼 스타일 정의 */
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        /* 버튼 호버 효과 */
+        .button:hover {
+            background-color: #45a049;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<table>
+
+    <p class="head"> 상세 내용</p>
+    <tr>
+
+        <th>제목</th>
+
+        <td class="title"><%= post.title %></td>
+
+    </tr>
+
+    <tr>
+
+        <th>작성자</th>
+
+        <td class="author"><%= post.author %></td>
+
+    </tr>
+
+    <tr>
+
+        <th>게시글 내용</th>
+
+        <td class="content"><%= post.content %></td>
+
+    </tr>
+
+    <tr>
+
+        <th>생성일</th>
+
+        <td><%= post.created_at %></td>
+
+    </tr>
+
+    <tr>
+
+        <th>조회수</th>
+
+        <td><%= post.views %></td>
+
+    </tr>
+
+    <tr>
+
+        <th>좋아요 수</th>
+
+        <td><%= post.likes %></td>
+
+    </tr>
+
+        <tr>
+        <th>comments</th>
+        <td>
+            <% if(post.comments && post.comments.length>0){ %>
+                <% post.comments.forEach(comment=>{ %>
+                    <div class="comment">
+                        <p><strong><%= comment.author %></strong>:<%= comment.content %> </p>
+                        <% if (comment.children.length>0) { %>
+                            <div class="children">
+                                <% comment.children.forEach(child=> { %>
+                                    <div class="comment" style="margin-left: 20px;">
+                                        <p><strong><%= child.author %></strong>:<%= child.content %></p>
+                                    </div>
+                                <%  }); %>
+                            </div>
+
+                        <% }  %>
+                    </div>
+                <%   })%>
+            <% } else { %>
+                <p> No comment </p>
+            <% } %>
+
+        </td>
+    </tr>
+</table>
+<div class="center">
+    <a href="/" class="button">return to previous page</a>
+    <a href="/addComment?postId=<%= post.id%>" class="button">add comment</a>
+</div>
+</body>
+</html>
